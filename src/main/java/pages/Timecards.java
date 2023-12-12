@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,9 +29,7 @@ public class Timecards {
 	 @FindBy(xpath="//a[@title='Add time manually']") 
 	 WebElement addtime; 
 	 @FindBy(xpath="(//div[contains(@class, 'select2')])[7]")  
-	 
-	 WebElement teammember; 
-	
+     WebElement teammember; 
 	 @FindBy(name="in_date")
 	 WebElement indate;
 	 @FindBy(name="in_time")
@@ -41,11 +40,14 @@ public class Timecards {
 	 WebElement outtime;
 	 @FindBy(name="note")
 	 WebElement note;
-	 @FindBy(xpath="//input[@id='s2id_autogen12_search']")	 
+	 @FindBy(xpath="//input[@id='s2id_autogen5_search']")	 
 	 WebElement teammemberslist;
 	 @FindBy(xpath ="//button[@class='btn btn-primary']")	    
 	 WebElement saveButton;
-
+	 @FindBy(xpath="//input[@type='search']")
+	  WebElement search;
+	 @FindBy(xpath="//span[@id='attendance_user_id-error']")
+	 WebElement teammemberrequired;
 	 public void clickTimeCards()
 		{
 		 wait.waitForElementToBeClickable(attendance);
@@ -61,14 +63,12 @@ public class Timecards {
 
 		public void setTeammember(String timeTeammembers)
 		{
-			  System.out.println("ry");
+			
 			  wait.waitForElementToBeVisible(teammember);
 		      wait.waitForElementToBeClickable(teammember);
 		  	  element.mouseHoverAndClickonElement(teammember);
-		  	  System.out.println("rx");
 		  	  element.sendKeysUsingJavaScript(teammemberslist,timeTeammembers);
-			  System.out.println("rz");
-		  	  element.pressDownArrow(teammemberslist);
+			  element.pressDownArrow(teammemberslist);
 		  	  element.pressEnter(teammemberslist);
 		}	
 		 public void setIndate(String timeIndates)
@@ -99,8 +99,13 @@ public class Timecards {
 		    	wait.waitForElementToBeVisible(note);
 		    	note.sendKeys(timeNotes);
 		    }	
-				 
-		public void saveTime()
+		
+				 public boolean checkRequiredteammember() {
+						wait.waitForElementToBeVisible(teammemberrequired);
+			            return element.isElementDisplayed(teammemberrequired);
+					}
+			
+				public void saveTime()
 				    {
 				    	 	    	       
 				   element.mouseHoverAndClickonElement(saveButton);
@@ -117,7 +122,7 @@ public class Timecards {
 		    	this.setOutTime(timeOuttimes);
 		    	this.setNotes(timeNotes);
 		    	this.saveTime();
-		    	
+		    
 		    	
 		    }
 		

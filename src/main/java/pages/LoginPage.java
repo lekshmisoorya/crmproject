@@ -46,14 +46,12 @@ public class LoginPage {
 		    }
 		         public void loginPage(String stremail,String strpassword)
 			 {
-				    //System.out.println("Username: " + stremail);
-				    //System.out.println("Password: " + strpassword);
+				    
 			        this.setEmail(stremail);
 			        wait.waitForElementToBeVisible(password);
 			        this.setPassword(strpassword);
-			       // System.out.println("password field set.");
-			        this.signin();  
-			     //   System.out.println("login field set.");
+			       this.signin();  
+			   
 			  }
 		     public String getAuthenticationFailed() 
 		     {

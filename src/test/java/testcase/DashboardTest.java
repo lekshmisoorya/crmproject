@@ -1,5 +1,7 @@
 package testcase;
 
+import java.awt.AWTException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,13 +16,13 @@ public class DashboardTest extends BaseClass
 		 Dashboard dashboard;
 	    
 	     @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
-	     public void verifyAddDashboardTest(String stremail,String strpassword,String notesticky) throws InterruptedException {
+	     public void verifyAddDashboardTest(String stremail,String strpassword,String Descriptions) throws InterruptedException, AWTException {
 	    	 {
 	    	 login = new LoginPage(driver);
 	         dashboard= new Dashboard(driver);
 	         login.loginPage(stremail, strpassword);	        
-	         dashboard.addDashboardNoteAndVerify(notesticky);
-	    	 Assert.assertTrue(dashboard.verifyStickyNoteAdded(notesticky));
+	         dashboard.sharedocDashboard(Descriptions);
+	         Assert.assertTrue(dashboard.isLoginCheckToDashboardDisplayed());
 	     }
 	       
 	     }

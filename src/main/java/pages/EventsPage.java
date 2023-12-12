@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -51,6 +53,10 @@ public class EventsPage {
 	    WebElement month;
 	    @FindBy(xpath="//span[@class='year active focused']")
 	    WebElement year;
+	    @FindBy(xpath="//input[@type='radio']")
+		List<WebElement> radiobuttons;
+	    @FindBy(xpath="//span[@id='description-error']")
+		WebElement descriptionrequired;
 	    public void events()
 	    {
 	    	wait.waitForElementToBeClickable(events);
@@ -86,23 +92,24 @@ public class EventsPage {
 	    	wait.waitForElementToBeVisible(location);
 	    	location.sendKeys(eventsLocation);
 	    }	
+	    public void setRadioButton(String radioText)
+		{
+			element.radioButtonClick(radiobuttons,radioText);
+			element.scrollToElement(savebutton);
+		}
 	    
 	    public void clickSaveButton() {
 	    	wait.waitForElementToBeClickable(savebutton);
 	    	savebutton.click();
 	    	System.out.println("save");
 	    }
+	    
 	    public void strdate(String day, String month, String year) {
         	startdate.click();
         	element.enterDate(startdate, day, month, year);
         }
-	    public boolean checkDescription(String eventsDescription) {
-		    wait.waitForElementToBeVisible(description);
-		    String actualText = description.getAttribute("value").trim();
-		    String expectedText = eventsDescription.trim();
-    		return actualText.equalsIgnoreCase(expectedText);
-		}
-	    public void addingEvents(String eventsTitle,String eventsDescription,String eventsStartdate,String eventsEnddate,String eventsLocation)
+	   
+	    public void addingEvents(String eventsTitle,String eventsDescription,String eventsStartdate,String eventsEnddate,String eventsLocation,String radiobuttontext)
 	    		{
 	    	this.events();
 	    	this.addevent();
@@ -111,8 +118,13 @@ public class EventsPage {
 	    	this.setStartdate(eventsStartdate);
 	    	this.setEnddate(eventsEnddate);
 	    	this.setLocation(eventsLocation);
+	    	this.setRadioButton(radiobuttontext);
 	    	this.clickSaveButton();
 	    	
 	    }
+		public boolean checkRequiredDescription() {
+			wait.waitForElementToBeVisible(descriptionrequired);
+            return element.isElementDisplayed(descriptionrequired);
+		}
 	    
 }

@@ -117,19 +117,8 @@ public class ItemsPage{
 	        element.scrollBack();
 	        System.out.println("Scrolled back to the top");
 	    }
-
-	       
-	    	/*element.scrollToElement(firstpageoftable);
-	        
-	    	wait.waitForElementToBeClickable(firstpageoftable);
-	    	firstpageoftable.click();
-	    
-	        Thread.sleep(1000);
-	        element.scrollInToUp();
-	        System.out.println("Scrolled back to the top");*/
-	    
-	    
-	    public boolean checkTableDescription(String itemDescription)
+	           	
+	      public boolean checkTableDescription(String itemDescription)
 	    {
 		    System.out.println(tableDescription.getText());
 	    	String titleofnotes=element.getElementText(tableDescription);
@@ -153,7 +142,7 @@ public class ItemsPage{
 	 		 this.setDescription(itemDescription);
 	 		 this.setUnitType(itemunittype);
 	 		 this.setItemrate(itemRate);
-	 		// this.setLabels(noteLabels);
+	 		
 	 		this.clickSaveButton();
 	 		this.clickSearchNotes(itemDescription);
 	 		this.clickFirstPageOfTable();

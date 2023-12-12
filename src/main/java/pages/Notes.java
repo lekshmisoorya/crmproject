@@ -75,10 +75,6 @@ public class Notes {
 	        description.sendKeys(noteDescription);
 	    }
 
-	   /* public void setLabels(String noteLabels) {
-	        labels.sendKeys(noteLabels);
-	        // Implement code to select label options from the dropdown
-	    }*/
 	    public void clickSaveButton() {
 	    	wait.waitForElementToBeClickable(saveButton);
 	        saveButton.click();
@@ -112,19 +108,8 @@ public class Notes {
 	        element.scrollBack();
 	        System.out.println("Scrolled back to the top");
 	    }
-
-	       
-	    	/*element.scrollToElement(firstpageoftable);
-	        
-	    	wait.waitForElementToBeClickable(firstpageoftable);
-	    	firstpageoftable.click();
-	    
-	        Thread.sleep(1000);
-	        element.scrollInToUp();
-	        System.out.println("Scrolled back to the top");*/
-	    
-	    
-	    public boolean checkTableTitle(String noteTitle)
+	     
+	      public boolean checkTableTitle(String noteTitle)
 	    {
 		    
 	    	String titleofnotes=element.getElementText(tabletitle);
@@ -150,7 +135,6 @@ public class Notes {
 	 		this.clickAddNoteButton();
 	 		this.setTitle(noteTitle);
 	 		this.setDescription(noteDescription);
-	 		// this.setLabels(noteLabels);
 	 		this.clickSaveButton();
 	 		this.clickSearchNotes(noteTitle);
 	 		this.clickFirstPageOfTable();

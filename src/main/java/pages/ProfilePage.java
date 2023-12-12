@@ -90,8 +90,7 @@ public class ProfilePage {
 			alternativeAddress.clear();
 			alternativeAddress.sendKeys(Address);
 			element.scrollToElement(alternativeAddress);
-			
-		//	element.scrollToElement(save);
+					
 		}
 		public void setPhone(String phoneNumber)
 		{

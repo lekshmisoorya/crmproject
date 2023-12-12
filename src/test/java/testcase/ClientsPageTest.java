@@ -15,7 +15,7 @@ public class ClientsPageTest extends BaseClass
 	 LoginPage login;
 	 Dashboard dashboard;
      ClientsPage clientspage;
-     @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
+     @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata",retryAnalyzer=RetryAnalyzer.class)
      public void verifyAddClientsTest(String stremail, String strpassword,String clientCompanyName,String clientAddress,String clientCity,String clientState,String clientZip,String clientCountry,String clientPhone,String clientWebsite,String clientVatNumber) throws InterruptedException
      { 
     	 login = new LoginPage(driver);

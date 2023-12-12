@@ -138,46 +138,13 @@ public class ClientsPage {
 		    e.printStackTrace();
 		}
 	    }
-	  /* public void clickFirstPageOfTable() throws InterruptedException
-	    {   
-	       
-	    	element.scrollToElement(firstpageoftable);
-	    	wait.waitForElementToBeClickable(firstpageoftable);
-	        firstpageoftable.click();
-	        Thread.sleep(1000);
-	        element.scrollBack();
-	        System.out.println("Scrolled back to the top");
-	    }*/
-
-	       
-	    	/*element.scrollToElement(firstpageoftable);
-	        
-	    	wait.waitForElementToBeClickable(firstpageoftable);
-	    	firstpageoftable.click();
-	    
-	        Thread.sleep(1000);
-	        element.scrollInToUp();
-	        System.out.println("Scrolled back to the top");*/
-	    
-	    
-	   /* public boolean checkTableDescription(String companyname)
-	    {
-		    System.out.println(tableCompanyName.getText());
-	    	String titleofitems=element.getElementText(tableCompanyName);
-	    	if(titleofitems.equalsIgnoreCase(companyname))
-	    	{
-	    		
-	    		return true;
-	    	}
-	    	return false;
-	    }*/
+	 
 	   public void setPrintClients()
 	    {
 	    	wait.waitForElementToBeClickable(printClient);
 	    	
 	    	printClient.click();
-	    	System.out.println("print");
-	    }
+	    		    }
 	   public boolean setPrintID()
 	   {
 		   element.scrollToElement(printID);
@@ -204,9 +171,7 @@ public class ClientsPage {
 	    	this.setPrintClients();
 	    	this.setPrintID();
 	    	
-	 	//	this.clickFirstPageOfTable();
-	 		//this.checkTableDescription(clientCompanyName);
-	 		//this.verifyDeleteItem();
+	 	
 	    }
 }  
 	    

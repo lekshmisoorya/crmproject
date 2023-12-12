@@ -1,6 +1,7 @@
 package testcase;
 
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import pages.Dashboard;
@@ -19,7 +20,9 @@ public class TimecardTest extends BaseClass{
        login.loginPage(stremail, strpassword);
        timecards = new Timecards(driver);
        timecards.addTimeCards(timeTeammembers,timeIndates,timeIntimes,timeOutdates,timeOuttimes,timeNotes); 
-      //Assert.assertTrue(announcements.checkTitle(announcementTitle));
-   }
+       if (timeTeammembers.isEmpty()) {
+	         System.out.println("Is description field required? " + timecards.checkRequiredteammember());
+	         Assert.assertTrue(timecards.checkRequiredteammember());
+       }  }
 }
 

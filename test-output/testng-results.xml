@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="1" failed="3" skipped="0">
+<testng-results ignored="0" total="13" passed="10" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-11T21:49:25 IST" name="Suite" finished-at="2023-12-11T21:50:19 IST" duration-ms="53926">
+  <suite started-at="2023-12-12T19:18:37 IST" name="Suite" finished-at="2023-12-12T19:21:23 IST" duration-ms="165580">
     <groups>
     </groups>
-    <test started-at="2023-12-11T21:49:25 IST" name="Test_Chrome" finished-at="2023-12-11T21:50:19 IST" duration-ms="53926">
+    <test started-at="2023-12-12T19:18:37 IST" name="Test_Chrome" finished-at="2023-12-12T19:21:23 IST" duration-ms="165580">
       <class name="testcase.LoginPageTest">
-        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.LoginPageTest@44d52de2]" started-at="2023-12-11T21:49:27 IST" name="setUpDriverOpenUrl" finished-at="2023-12-11T21:49:32 IST" duration-ms="4854" status="PASS">
+        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.LoginPageTest@2805d709]" started-at="2023-12-12T19:19:51 IST" name="setUpDriverOpenUrl" finished-at="2023-12-12T19:19:54 IST" duration-ms="2907" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriverOpenUrl -->
-        <test-method signature="verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@44d52de2]" started-at="2023-12-11T21:49:32 IST" name="verifyValid_credentials" data-provider="logdata" finished-at="2023-12-11T21:49:43 IST" duration-ms="11142" status="FAIL">
+        <test-method signature="verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@2805d709]" started-at="2023-12-12T19:19:54 IST" name="verifyValid_credentials" data-provider="logdata" finished-at="2023-12-12T19:20:05 IST" duration-ms="10581" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -39,9 +39,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4a7c21e980674e79ed0e653834ff0665, findElement {using=xpath, value=//img[@class='dashboard-image']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56046}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56046/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4a7c21e980674e79ed0e653834ff0665]]>
+Command: [fb433684df8e0dcfccc22785ba6bab96, findElement {using=xpath, value=//img[@class='dashboard-image']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51194/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fb433684df8e0dcfccc22785ba6bab96]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@class='dashboard-image']"}
@@ -50,9 +50,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4a7c21e980674e79ed0e653834ff0665, findElement {using=xpath, value=//img[@class='dashboard-image']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56046}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56046/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4a7c21e980674e79ed0e653834ff0665
+Command: [fb433684df8e0dcfccc22785ba6bab96, findElement {using=xpath, value=//img[@class='dashboard-image']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51194/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fb433684df8e0dcfccc22785ba6bab96
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -72,7 +72,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
-at pages.Dashboard.isLoginCheckToDashboardDisplayed(Dashboard.java:29)
+at pages.Dashboard.isLoginCheckToDashboardDisplayed(Dashboard.java:39)
 at testcase.LoginPageTest.verifyValid_credentials(LoginPageTest.java:54)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -108,18 +108,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyValid_credentials -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginPageTest@44d52de2]" started-at="2023-12-11T21:49:43 IST" name="takeScreenshotOnFailure" finished-at="2023-12-11T21:49:43 IST" duration-ms="451" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginPageTest@2805d709]" started-at="2023-12-12T19:20:05 IST" name="takeScreenshotOnFailure" finished-at="2023-12-12T19:20:05 IST" duration-ms="480" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyValid_credentials status=FAILURE method=LoginPageTest.verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@44d52de2] output={null}]]]>
+                <![CDATA[[TestResult name=verifyValid_credentials status=FAILURE method=LoginPageTest.verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@2805d709] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
-        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.LoginPageTest@44d52de2]" started-at="2023-12-11T21:49:43 IST" name="setUpDriverOpenUrl" finished-at="2023-12-11T21:49:47 IST" duration-ms="3400" status="PASS">
+        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.LoginPageTest@2805d709]" started-at="2023-12-12T19:20:05 IST" name="setUpDriverOpenUrl" finished-at="2023-12-12T19:20:11 IST" duration-ms="5881" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -130,7 +130,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriverOpenUrl -->
-        <test-method signature="verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@44d52de2]" started-at="2023-12-11T21:49:47 IST" name="verifyValid_credentials" data-provider="logdata" finished-at="2023-12-11T21:49:58 IST" duration-ms="11166" status="FAIL">
+        <test-method signature="verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@2805d709]" started-at="2023-12-12T19:20:11 IST" name="verifyValid_credentials" data-provider="logdata" finished-at="2023-12-12T19:20:23 IST" duration-ms="11606" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -151,9 +151,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3a11d3d58b78a6453e5b592a1c880f82, findElement {using=xpath, value=//img[@class='dashboard-image']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56063}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56063/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3a11d3d58b78a6453e5b592a1c880f82]]>
+Command: [9618159a699e06c824e9d058d0eb6a66, findElement {using=xpath, value=//img[@class='dashboard-image']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51226}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51226/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9618159a699e06c824e9d058d0eb6a66]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@class='dashboard-image']"}
@@ -162,9 +162,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3a11d3d58b78a6453e5b592a1c880f82, findElement {using=xpath, value=//img[@class='dashboard-image']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56063}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56063/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3a11d3d58b78a6453e5b592a1c880f82
+Command: [9618159a699e06c824e9d058d0eb6a66, findElement {using=xpath, value=//img[@class='dashboard-image']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51226}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51226/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9618159a699e06c824e9d058d0eb6a66
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -184,7 +184,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
-at pages.Dashboard.isLoginCheckToDashboardDisplayed(Dashboard.java:29)
+at pages.Dashboard.isLoginCheckToDashboardDisplayed(Dashboard.java:39)
 at testcase.LoginPageTest.verifyValid_credentials(LoginPageTest.java:54)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -220,18 +220,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyValid_credentials -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginPageTest@44d52de2]" started-at="2023-12-11T21:49:58 IST" name="takeScreenshotOnFailure" finished-at="2023-12-11T21:49:58 IST" duration-ms="306" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginPageTest@2805d709]" started-at="2023-12-12T19:20:23 IST" name="takeScreenshotOnFailure" finished-at="2023-12-12T19:20:23 IST" duration-ms="389" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyValid_credentials status=FAILURE method=LoginPageTest.verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@44d52de2] output={null}]]]>
+                <![CDATA[[TestResult name=verifyValid_credentials status=FAILURE method=LoginPageTest.verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@2805d709] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
-        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.LoginPageTest@44d52de2]" started-at="2023-12-11T21:49:58 IST" name="setUpDriverOpenUrl" finished-at="2023-12-11T21:50:01 IST" duration-ms="3436" status="PASS">
+        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.LoginPageTest@2805d709]" started-at="2023-12-12T19:20:23 IST" name="setUpDriverOpenUrl" finished-at="2023-12-12T19:20:28 IST" duration-ms="4321" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -242,7 +242,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriverOpenUrl -->
-        <test-method signature="verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@44d52de2]" started-at="2023-12-11T21:50:01 IST" name="verifyValid_credentials" data-provider="logdata" finished-at="2023-12-11T21:50:12 IST" duration-ms="10722" status="FAIL">
+        <test-method signature="verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@2805d709]" started-at="2023-12-12T19:20:28 IST" name="verifyValid_credentials" data-provider="logdata" finished-at="2023-12-12T19:20:38 IST" duration-ms="10776" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -263,9 +263,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f94d36e85b35649029520da08f9ee071, findElement {using=xpath, value=//img[@class='dashboard-image']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56087}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56087/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f94d36e85b35649029520da08f9ee071]]>
+Command: [04ff113f896cadfa42bdf54d22dcaf35, findElement {using=xpath, value=//img[@class='dashboard-image']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51257}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51257/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 04ff113f896cadfa42bdf54d22dcaf35]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[@class='dashboard-image']"}
@@ -274,9 +274,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f94d36e85b35649029520da08f9ee071, findElement {using=xpath, value=//img[@class='dashboard-image']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56087}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56087/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f94d36e85b35649029520da08f9ee071
+Command: [04ff113f896cadfa42bdf54d22dcaf35, findElement {using=xpath, value=//img[@class='dashboard-image']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\Karthik\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51257}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51257/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 04ff113f896cadfa42bdf54d22dcaf35
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -296,7 +296,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy17.isDisplayed(Unknown Source)
-at pages.Dashboard.isLoginCheckToDashboardDisplayed(Dashboard.java:29)
+at pages.Dashboard.isLoginCheckToDashboardDisplayed(Dashboard.java:39)
 at testcase.LoginPageTest.verifyValid_credentials(LoginPageTest.java:54)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -332,18 +332,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyValid_credentials -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginPageTest@44d52de2]" started-at="2023-12-11T21:50:12 IST" name="takeScreenshotOnFailure" finished-at="2023-12-11T21:50:13 IST" duration-ms="349" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginPageTest@2805d709]" started-at="2023-12-12T19:20:38 IST" name="takeScreenshotOnFailure" finished-at="2023-12-12T19:20:39 IST" duration-ms="376" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyValid_credentials status=FAILURE method=LoginPageTest.verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@44d52de2] output={null}]]]>
+                <![CDATA[[TestResult name=verifyValid_credentials status=FAILURE method=LoginPageTest.verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@2805d709] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
-        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.LoginPageTest@44d52de2]" started-at="2023-12-11T21:50:13 IST" name="setUpDriverOpenUrl" finished-at="2023-12-11T21:50:17 IST" duration-ms="3956" status="PASS">
+        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.LoginPageTest@2805d709]" started-at="2023-12-12T19:20:39 IST" name="setUpDriverOpenUrl" finished-at="2023-12-12T19:20:42 IST" duration-ms="3287" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -354,7 +354,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriverOpenUrl -->
-        <test-method signature="verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@44d52de2]" started-at="2023-12-11T21:50:17 IST" name="verifyValid_credentials" data-provider="logdata" finished-at="2023-12-11T21:50:19 IST" duration-ms="1986" status="PASS">
+        <test-method signature="verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@2805d709]" started-at="2023-12-12T19:20:42 IST" name="verifyValid_credentials" data-provider="logdata" finished-at="2023-12-12T19:20:44 IST" duration-ms="1974" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -370,11 +370,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyValid_credentials -->
-        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginPageTest@44d52de2]" started-at="2023-12-11T21:50:19 IST" name="takeScreenshotOnFailure" finished-at="2023-12-11T21:50:19 IST" duration-ms="377" status="PASS">
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.LoginPageTest@2805d709]" started-at="2023-12-12T19:20:44 IST" name="takeScreenshotOnFailure" finished-at="2023-12-12T19:20:44 IST" duration-ms="136" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyValid_credentials status=SUCCESS method=LoginPageTest.verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@44d52de2] output={null}]]]>
+                <![CDATA[[TestResult name=verifyValid_credentials status=SUCCESS method=LoginPageTest.verifyValid_credentials(java.lang.String,java.lang.String)[pri:4, instance:testcase.LoginPageTest@2805d709] output={null}]]]>
               </value>
             </param>
           </params>
@@ -382,6 +382,586 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- takeScreenshotOnFailure -->
       </class> <!-- testcase.LoginPageTest -->
+      <class name="testcase.AnnouncementTest">
+        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.AnnouncementTest@5a56cdac]" started-at="2023-12-12T19:19:09 IST" name="setUpDriverOpenUrl" finished-at="2023-12-12T19:19:12 IST" duration-ms="2952" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriverOpenUrl -->
+        <test-method signature="verifyAddAnnouncements(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.AnnouncementTest@5a56cdac]" started-at="2023-12-12T19:19:12 IST" name="verifyAddAnnouncements" data-provider="logdata" finished-at="2023-12-12T19:19:18 IST" duration-ms="6241" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@admin.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[hlo]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[please]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2023/05/05]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2023/06/05]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[All teammembers]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddAnnouncements -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.AnnouncementTest@5a56cdac]" started-at="2023-12-12T19:19:18 IST" name="takeScreenshotOnFailure" finished-at="2023-12-12T19:19:19 IST" duration-ms="153" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAddAnnouncements status=SUCCESS method=AnnouncementTest.verifyAddAnnouncements(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.AnnouncementTest@5a56cdac] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.AnnouncementTest -->
+      <class name="testcase.ProfilePageTest">
+        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.ProfilePageTest@3a44431a]" started-at="2023-12-12T19:21:06 IST" name="setUpDriverOpenUrl" finished-at="2023-12-12T19:21:08 IST" duration-ms="2622" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriverOpenUrl -->
+        <test-method signature="verifyUseraddprofile(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.ProfilePageTest@3a44431a]" started-at="2023-12-12T19:21:08 IST" name="verifyUseraddprofile" data-provider="logdata" finished-at="2023-12-12T19:21:14 IST" duration-ms="5707" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@admin.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[soorya]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Raj]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[leks@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[pcode]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[45623]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[855]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[895]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[male]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUseraddprofile -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.ProfilePageTest@3a44431a]" started-at="2023-12-12T19:21:14 IST" name="takeScreenshotOnFailure" finished-at="2023-12-12T19:21:14 IST" duration-ms="237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUseraddprofile status=SUCCESS method=ProfilePageTest.verifyUseraddprofile(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.ProfilePageTest@3a44431a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.ProfilePageTest -->
+      <class name="testcase.TimecardTest">
+        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.TimecardTest@3c7f66c4]" started-at="2023-12-12T19:21:14 IST" name="setUpDriverOpenUrl" finished-at="2023-12-12T19:21:17 IST" duration-ms="2899" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriverOpenUrl -->
+        <test-method signature="verifyTime(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.TimecardTest@3c7f66c4]" started-at="2023-12-12T19:21:17 IST" name="verifyTime" data-provider="logdata" finished-at="2023-12-12T19:21:22 IST" duration-ms="5381" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@admin.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[keerthana sasi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[2023/05/06]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[01:00AM]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2023/09/08]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[05:00PM]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[HI]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTime -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.TimecardTest@3c7f66c4]" started-at="2023-12-12T19:21:22 IST" name="takeScreenshotOnFailure" finished-at="2023-12-12T19:21:23 IST" duration-ms="170" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTime status=SUCCESS method=TimecardTest.verifyTime(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.TimecardTest@3c7f66c4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.TimecardTest -->
+      <class name="testcase.ItemsPageTest">
+        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.ItemsPageTest@5b03b9fe]" started-at="2023-12-12T19:19:40 IST" name="setUpDriverOpenUrl" finished-at="2023-12-12T19:19:43 IST" duration-ms="3336" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriverOpenUrl -->
+        <test-method signature="verifyAddItemsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.ItemsPageTest@5b03b9fe]" started-at="2023-12-12T19:19:43 IST" name="verifyAddItemsTest" data-provider="logdata" finished-at="2023-12-12T19:19:51 IST" duration-ms="7788" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@admin.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[hi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[crm]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[15]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddItemsTest -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.ItemsPageTest@5b03b9fe]" started-at="2023-12-12T19:19:51 IST" name="takeScreenshotOnFailure" finished-at="2023-12-12T19:19:51 IST" duration-ms="231" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAddItemsTest status=SUCCESS method=ItemsPageTest.verifyAddItemsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.ItemsPageTest@5b03b9fe] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.ItemsPageTest -->
+      <class name="testcase.NotesTest">
+        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.NotesTest@2ea41516]" started-at="2023-12-12T19:20:54 IST" name="setUpDriverOpenUrl" finished-at="2023-12-12T19:20:57 IST" duration-ms="3023" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriverOpenUrl -->
+        <test-method signature="verifyAddNotesTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.NotesTest@2ea41516]" started-at="2023-12-12T19:20:57 IST" name="verifyAddNotesTest" data-provider="logdata" finished-at="2023-12-12T19:21:05 IST" duration-ms="7831" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@admin.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[hi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[crm]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddNotesTest -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.NotesTest@2ea41516]" started-at="2023-12-12T19:21:05 IST" name="takeScreenshotOnFailure" finished-at="2023-12-12T19:21:05 IST" duration-ms="197" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAddNotesTest status=SUCCESS method=NotesTest.verifyAddNotesTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.NotesTest@2ea41516] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.NotesTest -->
+      <class name="testcase.EventsPageTest">
+        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.EventsPageTest@57cf54e1]" started-at="2023-12-12T19:19:30 IST" name="setUpDriverOpenUrl" finished-at="2023-12-12T19:19:33 IST" duration-ms="2622" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriverOpenUrl -->
+        <test-method signature="verifyUseraddevent(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.EventsPageTest@57cf54e1]" started-at="2023-12-12T19:19:33 IST" name="verifyUseraddevent" data-provider="logdata" finished-at="2023-12-12T19:19:39 IST" duration-ms="6503" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@admin.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[work]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[2023/08/05]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2023/09/08]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Tvm]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[All team members]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUseraddevent -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.EventsPageTest@57cf54e1]" started-at="2023-12-12T19:19:39 IST" name="takeScreenshotOnFailure" finished-at="2023-12-12T19:19:40 IST" duration-ms="174" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUseraddevent status=SUCCESS method=EventsPageTest.verifyUseraddevent(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.EventsPageTest@57cf54e1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.EventsPageTest -->
+      <class name="testcase.MessagePageTest">
+        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.MessagePageTest@3ee37e5a]" started-at="2023-12-12T19:20:44 IST" name="setUpDriverOpenUrl" finished-at="2023-12-12T19:20:47 IST" duration-ms="2643" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriverOpenUrl -->
+        <test-method signature="verifyUseraddmessage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.MessagePageTest@3ee37e5a]" started-at="2023-12-12T19:20:47 IST" name="verifyUseraddmessage" data-provider="logdata" finished-at="2023-12-12T19:20:54 IST" duration-ms="6995" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@admin.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[keerthana sasi]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[sending message]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Hello world]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUseraddmessage -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.MessagePageTest@3ee37e5a]" started-at="2023-12-12T19:20:54 IST" name="takeScreenshotOnFailure" finished-at="2023-12-12T19:20:54 IST" duration-ms="205" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUseraddmessage status=SUCCESS method=MessagePageTest.verifyUseraddmessage(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.MessagePageTest@3ee37e5a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.MessagePageTest -->
+      <class name="testcase.ClientsPageTest">
+        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.ClientsPageTest@7c711375]" started-at="2023-12-12T19:19:19 IST" name="setUpDriverOpenUrl" finished-at="2023-12-12T19:19:22 IST" duration-ms="2925" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriverOpenUrl -->
+        <test-method signature="verifyAddClientsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.ClientsPageTest@7c711375]" started-at="2023-12-12T19:19:22 IST" name="verifyAddClientsTest" data-provider="logdata" finished-at="2023-12-12T19:19:30 IST" duration-ms="8244" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@admin.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ABCD]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[pcode]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[tvm]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[kl]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[5456]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[india]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[565656556]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[www.crm.com]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[8654]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddClientsTest -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.ClientsPageTest@7c711375]" started-at="2023-12-12T19:19:30 IST" name="takeScreenshotOnFailure" finished-at="2023-12-12T19:19:30 IST" duration-ms="181" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAddClientsTest status=SUCCESS method=ClientsPageTest.verifyAddClientsTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.ClientsPageTest@7c711375] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.ClientsPageTest -->
+      <class name="testcase.DashboardTest">
+        <test-method is-config="true" signature="setUpDriverOpenUrl(java.lang.String)[pri:0, instance:testcase.DashboardTest@25084a1e]" started-at="2023-12-12T19:18:38 IST" name="setUpDriverOpenUrl" finished-at="2023-12-12T19:18:44 IST" duration-ms="5331" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriverOpenUrl -->
+        <test-method signature="verifyAddDashboardTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.DashboardTest@25084a1e]" started-at="2023-12-12T19:18:44 IST" name="verifyAddDashboardTest" data-provider="logdata" finished-at="2023-12-12T19:19:09 IST" duration-ms="25117" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@admin.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[crm]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddDashboardTest -->
+        <test-method is-config="true" signature="takeScreenshotOnFailure(org.testng.ITestResult)[pri:0, instance:testcase.DashboardTest@25084a1e]" started-at="2023-12-12T19:19:09 IST" name="takeScreenshotOnFailure" finished-at="2023-12-12T19:19:09 IST" duration-ms="185" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyAddDashboardTest status=SUCCESS method=DashboardTest.verifyAddDashboardTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcase.DashboardTest@25084a1e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshotOnFailure -->
+      </class> <!-- testcase.DashboardTest -->
     </test> <!-- Test_Chrome -->
   </suite> <!-- Suite -->
 </testng-results>

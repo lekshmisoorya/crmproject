@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -41,6 +43,8 @@ public class Announcements {
 	    WebElement allTeammembers;
 	    @FindBy(xpath ="//button[@class='btn btn-primary pull-right']")	    
 	    WebElement saveButton;
+	    @FindBy(xpath="//input[@type='checkbox']")
+		List<WebElement> checkboxes;
 	    public void setAnnouncements()
 	    {
 	    	wait.waitForElementToBeClickable(announcements);
@@ -77,27 +81,21 @@ public class Announcements {
 	    	        element.mouseHoverAndClickonElement(saveButton);
 	    	     
 	  		}
-	    public void clickTeammembers(String announcementTeammember)
-	    {
-	    	wait.waitForElementToBeClickable(allTeammembers);
-	    	allTeammembers.click();
-	    	
-	    }
-	    public boolean checkTitle(String announcementTitle) {
+	    
+	    	public void setCheckBoxClick(String checkboxText)
+	    	{
+	    		element.checkBox(checkboxes,checkboxText);
+	    		element.scrollToElement(saveButton);
+	    	}
+	    	    public boolean checkTitle(String announcementTitle) {
 		    wait.waitForElementToBeVisible(title);
 		    String actualText = title.getAttribute("value").trim();
 		    String expectedText = announcementTitle.trim();
     		return actualText.equalsIgnoreCase(expectedText);
 		}
-	  /*  public boolean checkAddress(String Address) {
-		    wait.waitForElementToBeVisible(alternativeAddress);
-		    String actualText = alternativeAddress.getAttribute("value").trim();
-		    String expectedText = Address.trim();
-    		return actualText.equalsIgnoreCase(expectedText);
-		}*/
-
 	  
-	    public void createAnnouncements(String announcementTitle,String announcementNotes,String announcementStartdate,String announcementEnddate)
+	  
+	    public void createAnnouncements(String announcementTitle,String announcementNotes,String announcementStartdate,String announcementEnddate,String checkboxText)
 	    {
 	    	this.setAnnouncements();
 	    	this.setAddannouncements();
@@ -105,15 +103,11 @@ public class Announcements {
 	    	this.setNotes(announcementNotes);
 	    	this.setStartdate(announcementStartdate);
 	    	this.setEnddate(announcementEnddate);
-	    	//this.clickTeammembers(announcementTeammember);
+	    	this.setCheckBoxClick(checkboxText);
 	    	this.saveAnnouncement();
 	    	
 	    	
 	    }
-		/*public String getTitleOfCreatedAnnouncement() {
-			// TODO Auto-generated method stub
-			   wait.waitForElementToBeVisible(title);
-		        return title.getAttribute("value").trim();
-		}*/
+		
 	    
 }

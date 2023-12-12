@@ -66,6 +66,16 @@ public class ElementUtilities {
     public  void clickOnElement(WebElement element){
         element.click();
     }
+    public void radioButtonClick(List<WebElement> radiobuttons, String radioText) 
+    {
+					for(int i=0;i<radiobuttons.size();i++)
+					{
+						if(radiobuttons.get(i).getText().equals(radioText))
+							js.executeScript("arguments[0].click();",radiobuttons.get(i));
+						
+					}
+					
+				}
     
     //dropdown with select tag
     public String selectDropdown(WebElement element,String value) {
@@ -79,7 +89,10 @@ public class ElementUtilities {
     {
     	
     	return js.executeScript("arguments[0].scrollIntoView();", (element));
-		
+    }
+    public Object scrollToBottom(WebElement element) {
+    	
+    	return js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
     }
     //scrollback to the top of the page
     public Object scrollBack()
@@ -163,7 +176,16 @@ public class ElementUtilities {
 		        String title=driver.getTitle();
 		        return title;
 		    }
-		
+			public void checkBox(List<WebElement> checkboxes, String checkboxText) 
+		     {
+							for(int i=0;i<checkboxes.size();i++)
+							{
+								if(checkboxes.get(i).getText().equals(checkboxText))
+									js.executeScript("arguments[0].click();",checkboxes.get(i));
+								
+							}
+							
+						}
 		   //alert accept
 		public void simpleAlert(WebDriver driver){
 		        Alert alert = driver.switchTo().alert();
