@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="Browser" value="chrome" />
+  <test thread-count="5" name="Test">
+	  <parameter name="Browser" value="chrome" />
+	   <groups>  
+        <run> 
+      <exclude name="Sanity" />
+        </run>  
+      </groups>
+    <classes>
+      <class name="testcase.LoginPageTest"/>  
+      <class name="testcase.NotesTest"/>  
+      <class name="testcase.ProfilePageTest"/>  
+
+         </classes>
+    </test> <!-- MyTest -->
+</suite> <!-- MySuite -->

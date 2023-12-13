@@ -10,9 +10,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.testng.annotations.DataProvider;
-
 import constant.Constant;
-
 public class ExcelUtilities {
 
     @DataProvider(name = "logdata")
@@ -47,16 +45,13 @@ public class ExcelUtilities {
                     }
                 }
             }
-
             workbook.close();
         } catch (IOException | EncryptedDocumentException e) {
             e.printStackTrace();
         }
-
         if (testData == null) {
             testData = new String[0][0]; // Provide an empty 2D array if data retrieval fails
         }
-
         return testData;
     }
 }

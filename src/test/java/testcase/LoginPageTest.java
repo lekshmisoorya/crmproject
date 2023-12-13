@@ -19,9 +19,16 @@ public class LoginPageTest extends BaseClass{
          LoginPage login;
 	     Dashboard dashboard;
     
+	     @Test(priority=1,dataProviderClass=ExcelUtilities.class,dataProvider="logdata")
+	     public void invalid_username(String stremail,String strpassword){
+	 	   login = new LoginPage(driver);
+	       	login.loginPage(stremail,strpassword);
+	       	dashboard=new Dashboard(driver);
+	     	Assert.assertTrue(login.getAuthenticationFailed().contains("Authentication failed!"));
+	     	System.out.println("username not valid");}
+
     
-    
-  @Test(dataProviderClass=ExcelUtilities.class,dataProvider="logdata")
+  @Test(priority=2,dataProviderClass=ExcelUtilities.class,dataProvider="logdata",groups= {"Regression","Sanity"})
     public void verifyValid_credentials(String stremail,String strpassword) throws InterruptedException
 {
     	login = new LoginPage(driver);

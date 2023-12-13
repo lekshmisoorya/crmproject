@@ -14,7 +14,7 @@ public class ProfilePageTest extends BaseClass {
 	 LoginPage login;
 	 Dashboard dashboard;
 	 ProfilePage profilepage;
-   @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
+   @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata",groups= {"Regression"})
    public void verifyUseraddprofile(String stremail,String strpassword,String profilefirstname,String profilelastname,String email,String Address,String phoneNumber,String skypeData,String ssnNum,String gender) throws InterruptedException {
   	   login = new LoginPage(driver);
        dashboard= new Dashboard(driver);

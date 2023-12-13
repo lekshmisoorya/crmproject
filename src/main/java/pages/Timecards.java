@@ -84,8 +84,8 @@ public class Timecards {
 		
 		    public void setOutdate(String timeOutdates)
 		    {
-		    	wait.waitForElementToBeVisible(indate);
-		    	indate.sendKeys(timeOutdates);
+		    	wait.waitForElementToBeVisible(outdate);
+		    	outdate.sendKeys(timeOutdates);
 		    }
 		    public void setOutTime(String timeOuttimes)
 		    {

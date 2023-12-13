@@ -12,7 +12,7 @@ public class NotesTest extends BaseClass{
 	 LoginPage login;
 	 Dashboard dashboard;
      Notes     notesPage;
-     @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
+     @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata",groups= {"Regression"})
      public void verifyAddNotesTest(String stremail, String strpassword,String noteTitle,String noteDescription) throws InterruptedException {
          login = new LoginPage(driver);
          dashboard= new Dashboard(driver);

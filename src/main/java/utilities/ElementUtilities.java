@@ -210,14 +210,7 @@ public class ElementUtilities {
 		    }
 		    
 	      
-		 //take screenshot
-		    public void fullPageScreenshot() throws IOException {
-		    	TakesScreenshot ts=(TakesScreenshot) driver;
-		        File src=ts.getScreenshotAs(OutputType.FILE);
-		        File targ=new File("C:\\Users\\user\\eclipse-workspace\\crmproject\\screenshot\\fullpage.png");
-		        FileUtils.copyFile(src, targ);
-		    }
-		    
+		       
 		    public void mouseHoverAndClickonElement(WebElement element){
 		        Actions action=new Actions(driver);
 		        action.moveToElement(element).click().build().perform();
