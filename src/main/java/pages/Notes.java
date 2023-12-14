@@ -54,6 +54,8 @@ public class Notes {
 	     WebElement editnotes;
 		 @FindBy(xpath="//ul[@class='select2-results']")
 		 List<WebElement> labelOptions;
+		 @FindBy(xpath="//span[@id='title-error']")
+		 WebElement titleRequired;
 	     public void clickNotes() {
 		 wait.waitForElementToBeClickable(notes);
 	      notes.click();
@@ -128,8 +130,19 @@ public class Notes {
 	    public void clickEditNotes() {
 	        editnotes.click();
 	    }
-	   
-	 	 public void notes(String noteTitle, String noteDescription) throws InterruptedException
+	    public boolean checkTableDescription(String noteDescription)
+	    {
+		    
+	    	String titleofnotes=element.getElementText(tabletitle);
+	    	if(titleofnotes.equalsIgnoreCase(noteDescription))
+	    	{
+	    		
+	    		return true;
+	    	}
+	    	return false;
+	    }
+
+	  	public void notes(String noteTitle, String noteDescription) throws InterruptedException
 	 	 {
 	 		this.clickNotes();
 	 		this.clickAddNoteButton();

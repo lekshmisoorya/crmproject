@@ -17,7 +17,7 @@ public class EventsPageTest extends BaseClass{
 	 Dashboard dashboard;
 	 EventsPage eventspage;
    @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
-   public void verifyUseraddevent(String stremail,String strpassword,String eventsTitle, String eventsDescription,String eventsStartdate,String eventsEnddate,String eventsLocation,String radiobuttontext) throws InterruptedException {
+   public void verifyUseraddeventDescrition(String stremail,String strpassword,String eventsTitle, String eventsDescription,String eventsStartdate,String eventsEnddate,String eventsLocation,String radiobuttontext) throws InterruptedException {
   	   login = new LoginPage(driver);
        dashboard= new Dashboard(driver);
        login.loginPage(stremail, strpassword);
@@ -26,5 +26,16 @@ public class EventsPageTest extends BaseClass{
        if (eventsDescription.isEmpty()) {
 	         System.out.println("Is description field required? " + eventspage.checkRequiredDescription());
 	         Assert.assertTrue(eventspage.checkRequiredDescription());
-	     }
+	     }}
+       @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
+       public void verifyUseraddeventTitle(String stremail,String strpassword,String eventsTitle, String eventsDescription,String eventsStartdate,String eventsEnddate,String eventsLocation,String radiobuttontext) throws InterruptedException {
+      	   login = new LoginPage(driver);
+           dashboard= new Dashboard(driver);
+           login.loginPage(stremail, strpassword);
+           eventspage = new EventsPage(driver);
+           eventspage.addingEvents(eventsTitle, eventsDescription,eventsStartdate,eventsEnddate,eventsLocation,radiobuttontext);
+           if (eventsDescription.isEmpty()) {
+    	        // System.out.println("Is description field required? " + eventspage.checkRequiredDescription());
+    	         Assert.assertTrue(eventspage.checkRequiredTitle());
+    	     }
 }}

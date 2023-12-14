@@ -101,26 +101,7 @@ public class ElementUtilities {
     }
     
    //dropdown without select
-
-
-	/*public void dropDownWithoutSelect(List<WebElement> element,String value) {
-		for(WebElement w:element)
-	    {
-	    	
-			System.out.println(w.getText());
-    		System.out.println("value is"+value);
-	    	
-	    	if (w.getText().equals(value))
-	    	{
-	    		
-	         w.click();
-	    	}
-	    }
-		
-	}*/
-    
-    
-    public void dropDownWithoutSelect(List<WebElement> elements, String value) {
+	            public void dropDownWithoutSelect(List<WebElement> elements, String value) {
         if (elements == null || value == null) {
             throw new IllegalArgumentException("Input parameters cannot be null");
         }
@@ -208,9 +189,7 @@ public class ElementUtilities {
 		    JavascriptExecutor js=(JavascriptExecutor) driver;
 		    js.executeScript("arguments[0].click();",element );  
 		    }
-		    
-	      
-		       
+		    	      		       
 		    public void mouseHoverAndClickonElement(WebElement element){
 		        Actions action=new Actions(driver);
 		        action.moveToElement(element).click().build().perform();

@@ -27,7 +27,7 @@ public class ClientsPage {
 	 WebElement addclient;
 	 @FindBy(name="company_name")
 	 WebElement companyname;    
-	 @FindBy(name="address")
+	 @FindBy(id="address")
 	 WebElement address;
 	 @FindBy(name="city")
 	 WebElement city;
@@ -57,6 +57,8 @@ public class ClientsPage {
 	    WebElement printClient;
 	   @FindBy(xpath="//table[@class='display dataTable no-footer']//td[1]")
 	   WebElement printID;
+	   @FindBy(xpath="//span[@id='company_name-error']")
+	   WebElement companynameRequired;
 	
 	    public void clickclients() {
 		 wait.waitForElementToBeClickable(clients);
@@ -152,6 +154,16 @@ public class ClientsPage {
 	    	printID.click();
 			return true;
 	   }
+	   public String requiredField() 
+	     {
+	     return companynameRequired.getText();
+	     } 
+	   public boolean checkAddress(String clientAddress) {
+		    wait.waitForElementToBeVisible(address);
+		    String actualText = address.getAttribute("value").trim();
+		    String expectedText = clientAddress.trim();
+   		return actualText.equalsIgnoreCase(expectedText);
+		}
 	    public void addClient(String clientCompanyName,String clientAddress,String clientCity,String clientState,String clientZip,String clientCountry,String clientPhone,String clientWebsite,String clientVatNumber) throws InterruptedException
 	    {
 	    	this.clickclients();

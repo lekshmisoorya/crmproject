@@ -56,7 +56,9 @@ public class EventsPage {
 	    @FindBy(xpath="//input[@type='radio']")
 		List<WebElement> radiobuttons;
 	    @FindBy(xpath="//span[@id='description-error']")
-		WebElement descriptionrequired;
+		WebElement descriptionRequired;
+	    @FindBy(xpath="//span[@id='title-error']")
+		WebElement titleRequired;
 	    public void events()
 	    {
 	    	wait.waitForElementToBeClickable(events);
@@ -123,8 +125,11 @@ public class EventsPage {
 	    	
 	    }
 		public boolean checkRequiredDescription() {
-			wait.waitForElementToBeVisible(descriptionrequired);
-            return element.isElementDisplayed(descriptionrequired);
+			wait.waitForElementToBeVisible(descriptionRequired);
+            return element.isElementDisplayed(descriptionRequired);
 		}
-	    
+		public boolean checkRequiredTitle() {
+			wait.waitForElementToBeVisible(titleRequired);
+            return element.isElementDisplayed(titleRequired);
+		}   
 }

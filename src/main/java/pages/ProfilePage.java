@@ -82,7 +82,7 @@ public class ProfilePage {
 			emailAddress.clear();
 			emailAddress.sendKeys(email);
 			element.scrollToElement(emailAddress);
-			//element.scrollToElement(save);
+			
 		}
 		public void setAlternativeAddress(String Address)
 		{
@@ -92,6 +92,7 @@ public class ProfilePage {
 			element.scrollToElement(alternativeAddress);
 					
 		}
+		
 		public void setPhone(String phoneNumber)
 		{
 			wait.waitForElementToBeClickable(phone);
@@ -138,6 +139,12 @@ public class ProfilePage {
 		    wait.waitForElementToBeVisible(alternativeAddress);
 		    String actualText = alternativeAddress.getAttribute("value").trim();
 		    String expectedText = Address.trim();
+    		return actualText.equalsIgnoreCase(expectedText);
+		}
+		public boolean checkfirstName(String profilefirstname) {
+		    wait.waitForElementToBeVisible(firstName);
+		    String actualText = firstName.getAttribute("value").trim();
+		    String expectedText = profilefirstname.trim();
     		return actualText.equalsIgnoreCase(expectedText);
 		}
 		

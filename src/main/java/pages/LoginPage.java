@@ -28,8 +28,8 @@ public class LoginPage {
 		   	WebElement homePageTitle ;
 		   	@FindBy (xpath="//span[text()='Authentication failed!']")
 		   	WebElement authenticationfailed ;
-		    @FindBy(id="password-error")
-		    WebElement passwordrequired;
+		   	@FindBy(xpath ="//span[@id='email-error']")
+		   	WebElement username;
 		    public void setEmail(String stremail)
 		    {
 		    	email.sendKeys(stremail);
@@ -59,6 +59,6 @@ public class LoginPage {
 	         } 
 		     public String requiredField() 
 		     {
-		     return passwordrequired.getText();
+		     return username.getText();
 		     } 
 	}

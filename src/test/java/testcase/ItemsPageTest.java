@@ -13,16 +13,25 @@ public class ItemsPageTest extends BaseClass {
 	 Dashboard dashboard;
      ItemsPage itemspage;
      @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata",retryAnalyzer = RetryAnalyzer.class)
-     public void verifyAddItemsTest(String stremail, String strpassword,String itemTitle,String itemDescription,String itemunittype,String itemRate) throws InterruptedException {
+     public void verifyAddItemsDescription(String stremail, String strpassword,String itemTitle,String itemDescription,String itemunittype,String itemRate) throws InterruptedException {
     	 login = new LoginPage(driver);
          dashboard= new Dashboard(driver);
          login.loginPage(stremail, strpassword);
          itemspage = new ItemsPage(driver);
          itemspage.addNewItem(itemTitle, itemDescription, itemunittype, itemRate);
          Assert.assertTrue(itemspage.checkTableDescription(itemDescription));
+                     
+     }
+     @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
+     public void verifyItemsTitle(String stremail, String strpassword,String itemTitle,String itemDescription,String itemunittype,String itemRate) throws InterruptedException {
+    	 login = new LoginPage(driver);
+         dashboard= new Dashboard(driver);
+         login.loginPage(stremail, strpassword);
+         itemspage = new ItemsPage(driver);
+         itemspage.addNewItem(itemTitle, itemDescription, itemunittype, itemRate);
+         Assert.assertTrue(itemspage.checkTableTitle(itemTitle));
          
-        
-       
+                     
      }
         
      }

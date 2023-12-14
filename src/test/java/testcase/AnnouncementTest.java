@@ -14,7 +14,7 @@ public class AnnouncementTest extends BaseClass {
 	 Dashboard dashboard;
 	 Announcements announcements;
    @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
-   public void verifyAddAnnouncements(String stremail,String strpassword,String announcementTitle,String announcementNotes,String announcementStartdate,String announcementEnddate,String checkboxText) throws InterruptedException {
+   public void verifyAddAnnouncementsTitle(String stremail,String strpassword,String announcementTitle,String announcementNotes,String announcementStartdate,String announcementEnddate,String checkboxText) throws InterruptedException {
   	   login = new LoginPage(driver);
        dashboard= new Dashboard(driver);
        login.loginPage(stremail, strpassword);
@@ -22,4 +22,34 @@ public class AnnouncementTest extends BaseClass {
        announcements.createAnnouncements(announcementTitle,announcementNotes,announcementStartdate,announcementEnddate,checkboxText); 
       Assert.assertTrue(announcements.checkTitle(announcementTitle));
    }
+   @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
+   public void titleErrorAnnouncement(String stremail,String strpassword,String announcementTitle,String announcementNotes,String announcementStartdate,String announcementEnddate,String checkboxText) throws InterruptedException {
+  	   login = new LoginPage(driver);
+       dashboard= new Dashboard(driver);
+       login.loginPage(stremail, strpassword);
+       announcements = new Announcements(driver);
+     announcements.createAnnouncements(announcementTitle,announcementNotes,announcementStartdate,announcementEnddate,checkboxText); 
+     
+      Assert.assertTrue(announcements.requiredField().contains("This field is required."));
+	}
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 }

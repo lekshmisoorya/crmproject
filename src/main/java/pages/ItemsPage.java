@@ -48,10 +48,14 @@ public class ItemsPage{
 		WebElement firstpageoftable;
 	    @FindBy(xpath="//table[@id='item-table']//tr[1]//td[2]")
 		WebElement tableDescription;
+	    @FindBy(xpath="//table[@id='item-table']//tr[1]//td[1]")
+	    WebElement tableTitle;
 	    @FindBy(xpath="(//a[@title='Delete'])[2]")
 		WebElement deleteitem;
 	//	@FindBy(xpath="//button[@id='confirmDeleteButton']")
 	//	WebElement deletebutton;
+	    @FindBy(xpath="//span[@id='item_rate-error']")
+	    WebElement rateRequired;
 	    public void clickItems()
 	    {
 	    	System.out.println("Before");
@@ -129,11 +133,28 @@ public class ItemsPage{
 	    	}
 	    	return false;
 	    }
+	      public boolean checkTableTitle(String itemTitle)
+		    {
+			    System.out.println(tableTitle.getText());
+		    	String titleofnotes=element.getElementText(tableTitle);
+		    	if(titleofnotes.equalsIgnoreCase(itemTitle))
+		    	{
+		    		
+		    		return true;
+		    	}
+		    	return false;
+		    }
 	    public void verifyDeleteItem()
 	    {
 	    	deleteitem.click();
 	    	//deletebutton.click();
 	    }
+	    public boolean requiredField() 
+	     {
+	    	wait.waitForElementToBeVisible(rateRequired);
+            return element.isElementDisplayed(rateRequired);
+	     } 
+
 	    public void addNewItem(String itemTitle, String itemDescription,String itemunittype,String itemRate) throws InterruptedException
 	 	 {
 	 		 this.clickItems();

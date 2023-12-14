@@ -14,7 +14,7 @@ public class TimecardTest extends BaseClass{
 	 Dashboard dashboard;
 	 Timecards timecards;
    @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
-   public void verifyTime(String stremail,String strpassword,String timeTeammembers,String timeIndates,String timeIntimes,String timeOutdates,String timeOuttimes,String timeNotes) throws InterruptedException {
+   public void verifyTimeTeammemberrequired(String stremail,String strpassword,String timeTeammembers,String timeIndates,String timeIntimes,String timeOutdates,String timeOuttimes,String timeNotes) throws InterruptedException {
   	   login = new LoginPage(driver);
        dashboard= new Dashboard(driver);
        login.loginPage(stremail, strpassword);

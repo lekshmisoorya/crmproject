@@ -16,12 +16,23 @@ public class MessagePageTest extends BaseClass {
 	 Dashboard dashboard;
 	 MessagePage messagepage;
     @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
-    public void verifyUseraddmessage(String stremail,String strpassword,String address, String messageSubject,String message) throws TimeoutException, InterruptedException 
+    public void verifyUsermessagesent(String stremail,String strpassword,String address, String messageSubject,String message) throws TimeoutException, InterruptedException 
 	  {
    	    login = new LoginPage(driver);
         dashboard= new Dashboard(driver);
         login.loginPage(stremail, strpassword);
         messagepage = new MessagePage(driver);
         messagepage.addMessage(address, messageSubject, message);
-        Assert.assertTrue(messagepage.checkMessageSent());
-}}
+        Assert.assertTrue(messagepage.checkMessageGone());
+}
+
+    @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
+    public void verifyUserSubjectRequired(String stremail,String strpassword,String address, String messageSubject,String message) throws TimeoutException, InterruptedException 
+	  {
+   	    login = new LoginPage(driver);
+        dashboard= new Dashboard(driver);
+        login.loginPage(stremail, strpassword);
+        messagepage = new MessagePage(driver);
+        messagepage.addMessage(address, messageSubject, message);
+    	Assert.assertTrue(messagepage.requiredField());
+	  }}

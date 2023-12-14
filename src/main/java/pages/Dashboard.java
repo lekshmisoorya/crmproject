@@ -24,10 +24,8 @@ public class Dashboard {
 	    PageFactory.initElements(driver, this);
 	    }
 	    @FindBy(xpath="//img[@class='dashboard-image']")
-	     WebElement loginchecktodashboard;
-	   // @FindBy(xpath="//textarea[@name='note']")
-	     //WebElement stickynotes;
-	    @FindBy(xpath="//i[@class='fa fa-comments']")
+	    WebElement loginchecktodashboard;
+	  	 @FindBy(xpath="//i[@class='fa fa-comments']")
 	    WebElement notes;
 	    @FindBy(xpath="//textarea[@name='description']")
 	    WebElement description;
@@ -35,32 +33,12 @@ public class Dashboard {
 	    WebElement fileupload;
 	    @FindBy(xpath="//button[@type='submit']")
 	    WebElement post;
+	    @FindBy(xpath="//span[@id='post_description-error']")
+	    WebElement documentrequired;
 	    public boolean isLoginCheckToDashboardDisplayed() {
 	        return loginchecktodashboard.isDisplayed();
 	    }
-	   /* public boolean verifyStickyNoteAdded(String expectedNote) {
-	        try {
-	            wait.waitForElementToBeVisible(stickynotes);
-	            element.scrollToBottom(stickynotes);
-	            String actualNote = stickynotes.getAttribute("value");
-	            return actualNote.equals(expectedNote);
-	        } catch (Exception e) {
-	            System.out.println("Exception occurred: " + e.getMessage());
-	            return false; // Return false or handle the situation accordingly
-	        }
-	    }
-	    public void setStickyNoteText(String notesticky) {
-	        wait.waitForElementToBeVisible(stickynotes);
-	        stickynotes.clear();
-	        element.scrollToBottom(stickynotes);
-	        element.scrollToElement(stickynotes);
-	        stickynotes.sendKeys(notesticky);;
-	    }
-		public void addDashboardNoteAndVerify(String notesticky) {
-			// TODO Auto-generated method stub
-			this.verifyStickyNoteAdded(notesticky);
-		}*/
-	    public void clickNotes() {
+	   	    public void clickNotes() {
 			 wait.waitForElementToBeClickable(notes);
 		      notes.click();
 	    }
@@ -80,6 +58,10 @@ public class Dashboard {
 		{
 			element.clickOnElement(post);
 		}
+	    public String requiredField() 
+	     {
+	     return documentrequired.getText();
+	     } 
 	    
 	    public void sharedocDashboard(String Descriptions) throws AWTException, InterruptedException
 	    {

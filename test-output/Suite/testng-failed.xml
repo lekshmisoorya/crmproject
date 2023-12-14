@@ -7,13 +7,13 @@
   <test thread-count="5" name="Test_Chrome(failed)">
     <parameter name="Browser" value="chrome"/>
     <classes>
-      <class name="testcase.LoginPageTest">
+      <class name="testcase.ClientsPageTest">
         <methods>
           <include name="takeScreenshotOnFailure"/>
+          <include name="verifyUseraddClientAddress" invocation-numbers="0"/>
           <include name="setUpDriverOpenUrl"/>
-          <include name="verifyValid_credentials" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testcase.LoginPageTest -->
+      </class> <!-- testcase.ClientsPageTest -->
     </classes>
   </test> <!-- Test_Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

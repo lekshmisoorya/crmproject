@@ -6,8 +6,9 @@
     <test name="Test_Chrome">
         <parameter name="Browser" value="chrome" />
         <classes>
-			        
-                     <class name="testcase.TimecardTest" />
+			                                              
+                        <class name="testcase.ClientsPageTest" />
+                      
           </classes>
     </test>
     </suite>

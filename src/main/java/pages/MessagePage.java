@@ -42,7 +42,8 @@ public class MessagePage{
 	 WebElement dropdownsearch;
 	 @FindBy(xpath = "//div[@class='app-alert-message']")
 	 WebElement messagealert;
-	
+	 @FindBy(xpath = "//span[@id='subject-error']")
+	 WebElement subjectRequired;
 
 	 public void clickMessages() {
 	        wait.waitForElementToBeClickable(messages);
@@ -81,7 +82,7 @@ public class MessagePage{
 	        wait.waitForElementToBeClickable(sentButton);
 	        sentButton.click();
 	    }
-	    public boolean checkMessageSent() throws TimeoutException 
+	    public boolean checkMessageGone() throws TimeoutException 
 		{
 		    wait.waitForElementToBeVisible(messagealert);
 			
@@ -91,6 +92,11 @@ public class MessagePage{
 			}
 			else return false;
 		}
+	    public boolean requiredField() 
+	     {
+	     return subjectRequired.getText() != null;
+	     } 
+
 	    public void addMessage(String address,String messageSubject,String message) throws InterruptedException
 	 	 {
 	 		this.clickMessages();

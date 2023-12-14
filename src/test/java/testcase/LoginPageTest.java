@@ -23,9 +23,8 @@ public class LoginPageTest extends BaseClass{
 	     public void invalid_username(String stremail,String strpassword){
 	 	   login = new LoginPage(driver);
 	       	login.loginPage(stremail,strpassword);
-	       	dashboard=new Dashboard(driver);
-	     	Assert.assertTrue(login.getAuthenticationFailed().contains("Authentication failed!"));
-	     	System.out.println("username not valid");}
+	      	Assert.assertTrue(login.requiredField().contains("Please enter a valid email address."));
+	     	}
 
     
   @Test(priority=2,dataProviderClass=ExcelUtilities.class,dataProvider="logdata",groups= {"Regression","Sanity"})
@@ -35,6 +34,6 @@ public class LoginPageTest extends BaseClass{
     	login.loginPage(stremail,strpassword);
     	dashboard=new Dashboard(driver);
     	Assert.assertTrue(dashboard.isLoginCheckToDashboardDisplayed());
-    	System.out.println("valid credentials");
+    	
     }}
   

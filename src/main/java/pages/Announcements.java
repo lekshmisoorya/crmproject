@@ -45,6 +45,8 @@ public class Announcements {
 	    WebElement saveButton;
 	    @FindBy(xpath="//input[@type='checkbox']")
 		List<WebElement> checkboxes;
+	    @FindBy(xpath="//span[@id='title-error']")
+	    WebElement titleRequired;
 	    public void setAnnouncements()
 	    {
 	    	wait.waitForElementToBeClickable(announcements);
@@ -93,7 +95,10 @@ public class Announcements {
 		    String expectedText = announcementTitle.trim();
     		return actualText.equalsIgnoreCase(expectedText);
 		}
-	  
+	    	    public String requiredField() 
+			     {
+			     return titleRequired.getText();
+			     } 
 	  
 	    public void createAnnouncements(String announcementTitle,String announcementNotes,String announcementStartdate,String announcementEnddate,String checkboxText)
 	    {
