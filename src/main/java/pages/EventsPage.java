@@ -125,8 +125,11 @@ public class EventsPage {
 	    	
 	    }
 		public boolean checkRequiredDescription() {
-			wait.waitForElementToBeVisible(descriptionRequired);
+			
+			wait.fluentWait(descriptionRequired);
             return element.isElementDisplayed(descriptionRequired);
+          
+			
 		}
 		public boolean checkRequiredTitle() {
 			wait.waitForElementToBeVisible(titleRequired);

@@ -9,13 +9,14 @@ import pages.Dashboard;
 import pages.ItemsPage;
 import pages.LoginPage;
 import pages.MessagePage;
+import utilities.DataProviderExcel;
 import utilities.ExcelUtilities;
 
 public class MessagePageTest extends BaseClass {
 	 LoginPage login;
 	 Dashboard dashboard;
 	 MessagePage messagepage;
-    @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
+    @Test(dataProviderClass = DataProviderExcel.class, dataProvider = "logdata")
     public void verifyUsermessagesent(String stremail,String strpassword,String address, String messageSubject,String message) throws TimeoutException, InterruptedException 
 	  {
    	    login = new LoginPage(driver);
@@ -26,7 +27,7 @@ public class MessagePageTest extends BaseClass {
         Assert.assertTrue(messagepage.checkMessageGone());
 }
 
-    @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
+    @Test(dataProviderClass = DataProviderExcel.class, dataProvider = "logdata")
     public void verifyUserSubjectRequired(String stremail,String strpassword,String address, String messageSubject,String message) throws TimeoutException, InterruptedException 
 	  {
    	    login = new LoginPage(driver);

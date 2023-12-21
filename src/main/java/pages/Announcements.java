@@ -89,7 +89,7 @@ public class Announcements {
 	    		element.checkBox(checkboxes,checkboxText);
 	    		element.scrollToElement(saveButton);
 	    	}
-	    	    public boolean checkTitle(String announcementTitle) {
+	    	   public boolean checkTitle(String announcementTitle) {
 		    wait.waitForElementToBeVisible(title);
 		    String actualText = title.getAttribute("value").trim();
 		    String expectedText = announcementTitle.trim();

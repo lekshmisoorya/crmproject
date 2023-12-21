@@ -7,13 +7,14 @@ import org.testng.annotations.Test;
 import pages.Dashboard;
 import pages.LoginPage;
 import pages.Timecards;
+import utilities.DataProviderExcel;
 import utilities.ExcelUtilities;
 
 public class TimecardTest extends BaseClass{
 	 LoginPage login;
 	 Dashboard dashboard;
 	 Timecards timecards;
-   @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
+   @Test(dataProviderClass = DataProviderExcel.class, dataProvider = "logdata")
    public void verifyTimeTeammemberrequired(String stremail,String strpassword,String timeTeammembers,String timeIndates,String timeIntimes,String timeOutdates,String timeOuttimes,String timeNotes) throws InterruptedException {
   	   login = new LoginPage(driver);
        dashboard= new Dashboard(driver);

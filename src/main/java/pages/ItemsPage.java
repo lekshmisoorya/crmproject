@@ -52,9 +52,7 @@ public class ItemsPage{
 	    WebElement tableTitle;
 	    @FindBy(xpath="(//a[@title='Delete'])[2]")
 		WebElement deleteitem;
-	//	@FindBy(xpath="//button[@id='confirmDeleteButton']")
-	//	WebElement deletebutton;
-	    @FindBy(xpath="//span[@id='item_rate-error']")
+		@FindBy(xpath="//span[@id='item_rate-error']")
 	    WebElement rateRequired;
 	    public void clickItems()
 	    {
@@ -147,7 +145,7 @@ public class ItemsPage{
 	    public void verifyDeleteItem()
 	    {
 	    	deleteitem.click();
-	    	//deletebutton.click();
+	    	
 	    }
 	    public boolean requiredField() 
 	     {

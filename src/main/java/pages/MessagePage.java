@@ -96,7 +96,6 @@ public class MessagePage{
 	     {
 	     return subjectRequired.getText() != null;
 	     } 
-
 	    public void addMessage(String address,String messageSubject,String message) throws InterruptedException
 	 	 {
 	 		this.clickMessages();

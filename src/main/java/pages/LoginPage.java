@@ -44,13 +44,13 @@ public class LoginPage {
 		    	signin.click();
 		    	System.out.println("sign in ");
 		    }
-		         public void loginPage(String stremail,String strpassword)
+		 public void loginPage(String stremail,String strpassword)
 			 {
 				    
 			        this.setEmail(stremail);
 			        wait.waitForElementToBeVisible(password);
 			        this.setPassword(strpassword);
-			       this.signin();  
+			        this.signin();  
 			   
 			  }
 		     public String getAuthenticationFailed() 

@@ -1,4 +1,4 @@
-package generaltest;
+package listener;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -30,13 +30,13 @@ public class ListenerTest extends BaseClass implements ITestListener{
     @Override
     public void onTestFailure(ITestResult result) {
         System.out.println("Test case failed :"+result.getName());
-
         test.fail(result.getThrowable());
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-
+    	 System.out.println((result.getMethod().getMethodName() + " skipped!"));
+    
     }
 
     @Override

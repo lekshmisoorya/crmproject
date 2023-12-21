@@ -122,9 +122,7 @@ public class Timecards {
 		    	this.setOutTime(timeOuttimes);
 		    	this.setNotes(timeNotes);
 		    	this.saveTime();
-		    
-		    	
-		    }
+		    		    	 }
 		
 						
 		}

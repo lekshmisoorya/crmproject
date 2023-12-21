@@ -1,10 +1,13 @@
 package testcase;
 
 import java.awt.AWTException;
+import java.io.IOException;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
+import pages.Announcements;
 import pages.Dashboard;
 import pages.LoginPage;
 import pages.Notes;
@@ -15,25 +18,38 @@ public class DashboardTest extends BaseClass
 		 LoginPage login;
 		 Dashboard dashboard;
 	    
-	     @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
-	     public void verifyDashboardLogo(String stremail,String strpassword,String Descriptions) throws InterruptedException, AWTException {
+	     @Test
+	     public void verifyDashboardLogo() throws InterruptedException,IOException, AWTException {
 	    	 {
 	    	 login = new LoginPage(driver);
 	         dashboard= new Dashboard(driver);
-	         login.loginPage(stremail, strpassword);	        
-	         dashboard.sharedocDashboard(Descriptions);
+	       	 ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Dashboardtest");
+	         login.setEmail(excel.getCellData(1, 0));
+	  		 login.setPassword(excel.getCellData(1, 1));
+	  		 login.signin();
+	  		dashboard.clickNotes();
+	  		dashboard.setDescription(excel.getCellData(1, 2));
+	  		dashboard.uploadFile();
+	  		dashboard.clickpost();
+	  	      
 	         Assert.assertTrue(dashboard.isLoginCheckToDashboardDisplayed());
 	     }}
-	     @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata")
-	    	 public void verifyDashboardDocumentRequired(String stremail,String strpassword,String Descriptions) throws InterruptedException, AWTException {
+	    @Test
+	    	 public void verifyDashboardDocumentRequired() throws InterruptedException,IOException, AWTException 
 		    	 {
-		    	 login = new LoginPage(driver);
-		         dashboard= new Dashboard(driver);
-		         login.loginPage(stremail, strpassword);	        
-		         dashboard.sharedocDashboard(Descriptions);
-		         Assert.assertTrue(dashboard.requiredField().contains("This field is required."));
+		    		 login = new LoginPage(driver);
+			         dashboard= new Dashboard(driver);
+			          ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Dashboardtest");
+			   		  login.setEmail(excel.getCellData(1, 0));
+			  		  login.setPassword(excel.getCellData(1, 1));
+			  		  login.signin();
+			  		  dashboard.clickNotes();
+			  		  dashboard.setDescription(excel.getCellData(1, 3));
+			  		  dashboard.uploadFile();
+			  		  dashboard.clickpost();
+			  	   Assert.assertTrue(dashboard.requiredField().contains(excel.getCellData(1, 4)));
 		     }
 	     
 	    	 }
-	     }
+	     
 

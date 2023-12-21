@@ -6,13 +6,14 @@ import org.testng.annotations.Test;
 import pages.Dashboard;
 import pages.LoginPage;
 import pages.Notes;
+import utilities.DataProviderExcel;
 import utilities.ExcelUtilities;
 
 public class NotesTest extends BaseClass{
 	 LoginPage login;
 	 Dashboard dashboard;
      Notes     notesPage;
-     @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata",groups= {"Regression"})
+     @Test(dataProviderClass = DataProviderExcel.class, dataProvider = "logdata",groups= {"Regression"})
      public void verifyAddNotesTestTitle(String stremail, String strpassword,String noteTitle,String noteDescription) throws InterruptedException {
          login = new LoginPage(driver);
          dashboard= new Dashboard(driver);
@@ -22,7 +23,7 @@ public class NotesTest extends BaseClass{
          Assert.assertTrue(notesPage.checkTableTitle(noteTitle));
        
      }
-     @Test(dataProviderClass = ExcelUtilities.class, dataProvider = "logdata",groups= {"Regression"})
+     @Test(dataProviderClass = DataProviderExcel.class, dataProvider = "logdata",groups= {"Regression"})
      public void verifyAddNotesDescription(String stremail, String strpassword,String noteTitle,String noteDescription) throws InterruptedException {
          login = new LoginPage(driver);
          dashboard= new Dashboard(driver);
