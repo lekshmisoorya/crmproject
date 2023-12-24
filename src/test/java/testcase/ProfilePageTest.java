@@ -5,10 +5,10 @@ import org.testng.annotations.Test;
 
 import pages.Dashboard;
 import pages.LoginPage;
-import pages.MessagePage;
+
 import pages.ProfilePage;
 import utilities.DataProviderExcel;
-import utilities.ExcelUtilities;
+
 import utilities.FakerUtility;
 
 public class ProfilePageTest extends BaseClass {
