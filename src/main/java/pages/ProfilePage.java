@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -48,6 +49,8 @@ public class ProfilePage {
 		WebElement datefield;
 		@FindBy(xpath="//th[@class='datepicker-switch'][1]")
 		WebElement datemonth;
+		@FindBy(xpath="//span[@id='first_name-error']")
+		WebElement requiredfield;
 		public void clickProfile()
 		{
 		 wait.waitForElementToBeClickable(icon);
@@ -147,6 +150,16 @@ public class ProfilePage {
 		    String expectedText = profilefirstname.trim();
     		return actualText.equalsIgnoreCase(expectedText);
 		}
+		 public boolean nameRequiredField() 
+	     {
+	    	wait.waitForElementToBeVisible(requiredfield);
+            return element.isElementDisplayed(requiredfield);
+	     } 
+	    
+		public boolean validateFirstname () {
+			
+	        return firstName.getText() != null;
+	    }
 		
 		public void addProfile(String profilefirstname,String profilelastname,String email,String Address,String phoneNumber,String skypeData,String ssnNum,String gender) 
 		{

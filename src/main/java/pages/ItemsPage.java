@@ -124,23 +124,15 @@ public class ItemsPage{
 	    {
 		    System.out.println(tableDescription.getText());
 	    	String titleofnotes=element.getElementText(tableDescription);
-	    	if(titleofnotes.equalsIgnoreCase(itemDescription))
-	    	{
-	    		
-	    		return true;
-	    	}
-	    	return false;
+	    	return (titleofnotes.equalsIgnoreCase(itemDescription));
+	    	
 	    }
 	      public boolean checkTableTitle(String itemTitle)
 		    {
 			    System.out.println(tableTitle.getText());
 		    	String titleofnotes=element.getElementText(tableTitle);
-		    	if(titleofnotes.equalsIgnoreCase(itemTitle))
-		    	{
-		    		
-		    		return true;
-		    	}
-		    	return false;
+		    return(titleofnotes.equalsIgnoreCase(itemTitle));
+		    	
 		    }
 	    public void verifyDeleteItem()
 	    {

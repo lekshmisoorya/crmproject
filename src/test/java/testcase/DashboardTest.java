@@ -20,12 +20,12 @@ public class DashboardTest extends BaseClass
 	    
 	     @Test
 	     public void verifyDashboardLogo() throws InterruptedException,IOException, AWTException {
-	    	 {
-	    	 login = new LoginPage(driver);
-	         dashboard= new Dashboard(driver);
+	  
+	     login = new LoginPage(driver);
+	       dashboard= new Dashboard(driver);
 	       	 ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Dashboardtest");
-	         login.setEmail(excel.getCellData(1, 0));
-	  		 login.setPassword(excel.getCellData(1, 1));
+	      login.setEmail(excel.getCellData(1, 0));
+	  		login.setPassword(excel.getCellData(1, 1));
 	  		 login.signin();
 	  		dashboard.clickNotes();
 	  		dashboard.setDescription(excel.getCellData(1, 2));
@@ -33,7 +33,7 @@ public class DashboardTest extends BaseClass
 	  		dashboard.clickpost();
 	  	      
 	         Assert.assertTrue(dashboard.isLoginCheckToDashboardDisplayed());
-	     }}
+	     }
 	    @Test
 	    	 public void verifyDashboardDocumentRequired() throws InterruptedException,IOException, AWTException 
 		    	 {

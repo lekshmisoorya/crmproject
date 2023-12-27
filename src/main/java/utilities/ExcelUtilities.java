@@ -3,42 +3,17 @@ package utilities;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import org.apache.poi.ss.usermodel.Cell;
+
 import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.ss.usermodel.Row;
+
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import constant.Constant;
+
  
 
-	/*public static FileInputStream f;
-	   public static XSSFWorkbook w;
-	   public static XSSFSheet s;
-	   
-	   
-	   public static String readStringData(int i,int j) throws IOException
-	   {
-		   f=new FileInputStream(Constant.EXCEL_FILE_PATH);
-		   w= new XSSFWorkbook(f);
-		   System.out.println("excel");
-		   s=w.getSheet("Logintest");
-		   System.out.println("excel1");
-		   Row r = s.getRow(i);
-		   Cell c =r.getCell(j);
-		   return c.getStringCellValue();
-				    }
-	   public static double readIntData(int i,int j) throws IOException 
-	   {
-		   f=new FileInputStream(Constant.EXCEL_FILE_PATH);
-		   w= new XSSFWorkbook(f);
-		   s=w.getSheet("Logintest");
-		   Row r = s.getRow(i);
-		   Cell c =r.getCell(j);
-		   return c.getNumericCellValue();
-	   }
-	}*/
+	
 public class ExcelUtilities {
     private XSSFSheet sheet;
     private XSSFWorkbook workbook;
@@ -54,10 +29,7 @@ public class ExcelUtilities {
     public String getCellData(int row, int columnNo)
     {
         XSSFCell cell = sheet.getRow(row).getCell(columnNo);
-      //  if (cell == null) {
-       //     return "Cell is empty or null"; // Change this to any specific string you want
-      //  }
-
+    
         if (cell.getCellType() == CellType.STRING) {
             return cell.getStringCellValue();
         } else if (cell.getCellType() == CellType.NUMERIC) {

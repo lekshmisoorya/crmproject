@@ -86,11 +86,8 @@ public class MessagePage{
 		{
 		    wait.waitForElementToBeVisible(messagealert);
 			
-			if(element.isElementDisplayed(messagealert))
-			{
-			return true;
-			}
-			else return false;
+			return(element.isElementDisplayed(messagealert));
+			
 		}
 	    public boolean requiredField() 
 	     {

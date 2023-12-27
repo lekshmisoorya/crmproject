@@ -7,10 +7,13 @@
         <parameter name="Browser" value="chrome" />
         <classes>
 			                                           
+                        <class name="testcase.ClientsPageTest" />
+                        <class name="testcase.ItemsPageTest" />
                         <class name="testcase.LoginPageTest" />
+                        <class name="testcase.MessagePageTest" />
                         
           </classes>
     </test>
     
     </suite>
-    
+   

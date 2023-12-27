@@ -24,12 +24,18 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import org.testng.annotations.Parameters;
-
+import org.testng.annotations.Test;
 
 import constant.Constant;
+import pages.Dashboard;
+import pages.LoginPage;
+import utilities.ExcelUtilities;
 
 public class BaseClass {
     WebDriver driver;
+    LoginPage login;
+	 Dashboard dashboard;
+	
     public static Properties prop = new Properties();
     @BeforeMethod
     @Parameters({"Browser"})
@@ -64,7 +70,8 @@ public class BaseClass {
             System.out.println("URL not found in properties file");
         }
     }
-    
+   
+   
     @AfterMethod
     public void takeScreenshotOnFailure(ITestResult iTestResult) throws IOException {
       	System.out.println(iTestResult.getStatus());

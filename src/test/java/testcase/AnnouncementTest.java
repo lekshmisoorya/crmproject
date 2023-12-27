@@ -21,11 +21,6 @@ public class AnnouncementTest extends BaseClass {
 	   ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Announcementtest");
 		  String email = excel.getCellData(1, 0);
 		  String password = excel.getCellData(1, 1);
-		  String title = excel.getCellData(1, 2);
-		  String notes = excel.getCellData(1, 3);
-		  String startdate = excel.getCellData(1, 4);
-		  String enddate = excel.getCellData(1, 5);
-		  String checktext = excel.getCellData(1, 6);
 		  login = new LoginPage(driver);
 		  login.setEmail(email);
 		  login.setPassword(password);
@@ -34,13 +29,13 @@ public class AnnouncementTest extends BaseClass {
 	      announcements = new Announcements(driver);
 	      announcements.setAnnouncements();
 	      announcements.setAddannouncements();
-	      announcements.setTitle(title);
-	      announcements.setNotes(notes);
-	      announcements.setStartdate(startdate);
-	      announcements.setEnddate(enddate);
-	      announcements.setCheckBoxClick(checktext);
+	      announcements.setTitle(excel.getCellData(1, 2));
+	      announcements.setNotes(excel.getCellData(1, 3));
+	      announcements.setStartdate(excel.getCellData(1, 4));
+	      announcements.setEnddate(excel.getCellData(1, 5));
+	      announcements.setCheckBoxClick(excel.getCellData(1, 6));
 	      announcements.saveAnnouncement();
-	       Assert.assertTrue(announcements.checkTitle(title));
+	       Assert.assertTrue(announcements.checkTitle(excel.getCellData(1, 2)));
    }
   
    @Test
@@ -49,11 +44,6 @@ public class AnnouncementTest extends BaseClass {
   	    ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Announcementtest");
 		  String email = excel.getCellData(1, 0);
 		  String password = excel.getCellData(1, 1);
-		//  String title = excel.getCellData(1, 7);
-		 // String notes = excel.getCellData(1, 3);
-		//  String startdate = excel.getCellData(1, 4);
-		//  String enddate = excel.getCellData(1, 5);
-		//  String checktext = excel.getCellData(1, 6);
 		  login = new LoginPage(driver);
 		  login.setEmail(email);
 		  login.setPassword(password);

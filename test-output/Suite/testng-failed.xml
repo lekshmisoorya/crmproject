@@ -7,44 +7,13 @@
   <test thread-count="5" name="Test_Chrome(failed)">
     <parameter name="Browser" value="chrome"/>
     <classes>
-      <class name="testcase.TimecardTest">
+      <class name="testcase.DashboardTest">
         <methods>
+          <include name="verifyDashboardLogo"/>
           <include name="takeScreenshotOnFailure"/>
           <include name="setUpDriverOpenUrl"/>
-          <include name="verifyTimeTeammemberrequired"/>
         </methods>
-      </class> <!-- testcase.TimecardTest -->
-      <class name="testcase.MessagePageTest">
-        <methods>
-          <include name="verifyUserSubjectRequired"/>
-          <include name="takeScreenshotOnFailure"/>
-          <include name="setUpDriverOpenUrl"/>
-          <include name="verifyUsermessagesent"/>
-        </methods>
-      </class> <!-- testcase.MessagePageTest -->
-      <class name="testcase.ProfilePageTest">
-        <methods>
-          <include name="verifyUseraddprofileAddress"/>
-          <include name="takeScreenshotOnFailure"/>
-          <include name="setUpDriverOpenUrl"/>
-          <include name="verifyFirstName"/>
-        </methods>
-      </class> <!-- testcase.ProfilePageTest -->
-      <class name="testcase.ClientsPageTest">
-        <methods>
-          <include name="takeScreenshotOnFailure"/>
-          <include name="setUpDriverOpenUrl"/>
-          <include name="verifyAddClientsTest"/>
-        </methods>
-      </class> <!-- testcase.ClientsPageTest -->
-      <class name="testcase.NotesTest">
-        <methods>
-          <include name="takeScreenshotOnFailure"/>
-          <include name="setUpDriverOpenUrl"/>
-          <include name="verifyAddNotesDescription"/>
-          <include name="verifyAddNotesTestTitle"/>
-        </methods>
-      </class> <!-- testcase.NotesTest -->
+      </class> <!-- testcase.DashboardTest -->
     </classes>
   </test> <!-- Test_Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -23,27 +23,23 @@ public class ItemsPageTest extends BaseClass {
          ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Itemstest");
 	   	  String email = excel.getCellData(1, 0);
 	   	  String password = excel.getCellData(1, 1);
-	   	  String itemTitle = excel.getCellData(1, 2);
-	   	 String itemDescription = excel.getCellData(1, 3);
-	   	 String itemunittype = excel.getCellData(1, 4);
-	   	 String itemRate = excel.getCellData(1, 5);
-	 	  login = new LoginPage(driver);
+		  login = new LoginPage(driver);
 	 	  login.setEmail(email);
 		  login.setPassword(password);
 		  login.signin();
          itemspage = new ItemsPage(driver);
          itemspage.clickItems();
          itemspage.additems();
-         itemspage.setTitle(itemTitle);
-         itemspage.setDescription(itemDescription);
-         itemspage.setUnitType(itemunittype);
-         itemspage.setItemrate(itemRate);
+         itemspage.setTitle(excel.getCellData(1, 2));
+         itemspage.setDescription(excel.getCellData(1, 3));
+         itemspage.setUnitType(excel.getCellData(1, 4));
+         itemspage.setItemrate(excel.getCellData(1, 5));
          itemspage.clickSaveButton();
-         itemspage.clickSearchNotes(itemDescription);
+         itemspage.clickSearchNotes(excel.getCellData(1, 3));
          itemspage.clickFirstPageOfTable();
-         itemspage.checkTableDescription(itemDescription);
+         itemspage.checkTableDescription(excel.getCellData(1, 3));
          itemspage.verifyDeleteItem();
-         Assert.assertTrue(itemspage.checkTableDescription(itemDescription));
+         Assert.assertTrue(itemspage.checkTableDescription(excel.getCellData(1, 3)));
                      
      }
      @Test
@@ -55,28 +51,24 @@ public class ItemsPageTest extends BaseClass {
          ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Itemstest");
 	   	  String email = excel.getCellData(1, 0);
 	   	  String password = excel.getCellData(1, 1);
-	   	  String itemTitle = excel.getCellData(1, 2);
-	   	 String itemDescription = excel.getCellData(1, 3);
-	   	 String itemunittype = excel.getCellData(1, 4);
-	   	 String itemRate = excel.getCellData(1, 5);
-	 	  login = new LoginPage(driver);
+	 	 login = new LoginPage(driver);
 	 	  login.setEmail(email);
 		  login.setPassword(password);
 		  login.signin();
         itemspage = new ItemsPage(driver);
         itemspage.clickItems();
         itemspage.additems();
-        itemspage.setTitle(itemTitle);
-        itemspage.setDescription(itemDescription);
-        itemspage.setUnitType(itemunittype);
-        itemspage.setItemrate(itemRate);
+        itemspage.setTitle(excel.getCellData(1, 2));
+        itemspage.setDescription(excel.getCellData(1, 2));
+        itemspage.setUnitType(excel.getCellData(1, 4));
+        itemspage.setItemrate(excel.getCellData(1, 5));
         itemspage.clickSaveButton();
-        itemspage.clickSearchNotes(itemDescription);
+        itemspage.clickSearchNotes(excel.getCellData(1, 2));
         itemspage.clickFirstPageOfTable();
-        itemspage.checkTableDescription(itemDescription);
+        itemspage.checkTableTitle(excel.getCellData(1, 2));
         itemspage.verifyDeleteItem();
-         Assert.assertTrue(itemspage.checkTableTitle(itemTitle));
-         
+         Assert.assertTrue(itemspage.checkTableTitle(excel.getCellData(1, 2)));
+      
                      
      }
         

@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.ElementUtilities;
+import utilities.FakerUtility;
 import utilities.WaitUtilities;
 
 public class ClientsPage {
@@ -174,7 +175,7 @@ public class ClientsPage {
 	    	this.setState(clientState);
 	    	this.setZip(clientZip);
 	    	this.setCountry(clientCountry);
-	    	this.setPhone(clientPhone);
+	    	this.setPhone(FakerUtility.phoneNumber());
 	    	this.setWebsite(clientWebsite);
 	    	this.setVatNumber(clientVatNumber);
 	    	

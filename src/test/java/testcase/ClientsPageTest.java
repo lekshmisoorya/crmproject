@@ -25,7 +25,7 @@ public class ClientsPageTest extends BaseClass
          dashboard= new Dashboard(driver);
          login.loginPage(stremail, strpassword);
          clientspage = new ClientsPage(driver);
-         clientspage.addClient(clientCompanyName, clientAddress, clientCity, clientState,clientZip,clientCountry,clientPhone,clientWebsite,clientVatNumber);
+         clientspage.addClient(clientCompanyName, clientAddress, clientCity, clientState,clientZip,clientCountry,FakerUtility.phoneNumber(),clientWebsite,clientVatNumber);
          Assert.assertTrue(clientspage.setPrintID());
          
              

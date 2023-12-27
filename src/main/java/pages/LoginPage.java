@@ -60,5 +60,6 @@ public class LoginPage {
 		     public String requiredField() 
 		     {
 		     return username.getText();
-		     } 
+		     }
+			
 	}
