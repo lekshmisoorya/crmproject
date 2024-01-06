@@ -15,18 +15,14 @@ import pages.MessagePage;
 import utilities.ExcelUtilities;
 
 public class MessagePageTest extends BaseClass {
-	 LoginPage login;
-	 Dashboard dashboard;
+	
 	 MessagePage messagepage;
 	 @Test(priority=1)
 	 public void verifyUsermessagesent() throws TimeoutException, InterruptedException, IOException 
 	  {
-  	    login = new LoginPage(driver);
-       dashboard= new Dashboard(driver);
+  	   
        ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Messagetest");
-       login.setEmail(excel.getCellData(1, 0));
-		 login.setPassword(excel.getCellData(1, 1));
-		 login.signin();
+       Login(excel.getCellData(1,0),excel.getCellData(1,1));
        messagepage = new MessagePage(driver);
        messagepage.clickMessages();
        messagepage.clickCompose();
@@ -39,12 +35,9 @@ public class MessagePageTest extends BaseClass {
 	 @Test(priority=2)
 	    public void verifyUserSubjectRequired() throws TimeoutException, InterruptedException, IOException 
 		  {
-	   	    login = new LoginPage(driver);
-	        dashboard= new Dashboard(driver);
+	   	    
 	        ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Messagetest");
-	        login.setEmail(excel.getCellData(1, 0));
-	 		 login.setPassword(excel.getCellData(1, 1));
-	 		 login.signin();
+	        Login(excel.getCellData(1,0),excel.getCellData(1,1));
 	        messagepage = new MessagePage(driver);
 	        messagepage.clickMessages();
 	        messagepage.clickCompose();

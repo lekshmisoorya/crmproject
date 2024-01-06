@@ -7,13 +7,13 @@
   <test thread-count="5" name="Test_Chrome(failed)">
     <parameter name="Browser" value="chrome"/>
     <classes>
-      <class name="testcase.DashboardTest">
+      <class name="testcase.NotesTest">
         <methods>
-          <include name="verifyDashboardLogo"/>
           <include name="takeScreenshotOnFailure"/>
           <include name="setUpDriverOpenUrl"/>
+          <include name="verifyAddNotesDescription" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testcase.DashboardTest -->
+      </class> <!-- testcase.NotesTest -->
     </classes>
   </test> <!-- Test_Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

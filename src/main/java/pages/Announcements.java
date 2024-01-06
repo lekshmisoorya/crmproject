@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -47,6 +48,14 @@ public class Announcements {
 		List<WebElement> checkboxes;
 	    @FindBy(xpath="//span[@id='title-error']")
 	    WebElement titleRequired;
+	    @FindBy(xpath ="//a[contains(@href,'announcements')]")
+	    WebElement announcements1;
+	    @FindBy(xpath="//a[@class='paginate_button current']")
+	    WebElement Pagination;
+	    @FindBy(xpath="//input[@type='search']")
+	    WebElement search;
+	    @FindBy(xpath="(//a[contains(@href,'announcements')])[2]")
+	    WebElement viewbutton;
 	    public void setAnnouncements()
 	    {
 	    	wait.waitForElementToBeClickable(announcements);
@@ -80,7 +89,7 @@ public class Announcements {
 	    public void saveAnnouncement()
 	    {
 	    	 	    	       
-	    	        element.mouseHoverAndClickonElement(saveButton);
+	    	  element.mouseHoverAndClickonElement(saveButton);
 	    	     
 	  		}
 	    
@@ -89,30 +98,33 @@ public class Announcements {
 	    		element.checkBox(checkboxes,checkboxText);
 	    		element.scrollToElement(saveButton);
 	    	}
-	    	   public boolean checkTitle(String announcementTitle) {
-		    wait.waitForElementToBeVisible(title);
-		    String actualText = title.getAttribute("value").trim();
-		    String expectedText = announcementTitle.trim();
-    		return actualText.equalsIgnoreCase(expectedText);
+	    	public void setAnnouncements1() {
+	    	   element.promptAlert(announcements1);
+	    	}
+	    	public void clickViewButton()
+	    	{
+	    		wait.waitForElementToBeVisible(viewbutton);
+	    		wait.waitForElementToBeClickable(viewbutton);
+	    		viewbutton.click();
+	    	}
+	    	
+	    	  
+	    	     	   
+	    	  
+	    	   public boolean checkTitle() {
+	    		   wait.waitForElementToBeVisible(title);
+	   			
+	   			return(element.isElementDisplayed(title));
 		}
-	    	    public String requiredField() 
+	    	  
+	    	           	
+	    	 
+	    	    
+	    	   public boolean requiredField() 
 			     {
-			     return titleRequired.getText();
+			     return titleRequired.getText() != null;
 			     } 
-	  
-	    public void createAnnouncements(String announcementTitle,String announcementNotes,String announcementStartdate,String announcementEnddate,String checkboxText)
-	    {
-	    	this.setAnnouncements();
-	    	this.setAddannouncements();
-	    	this.setTitle(announcementTitle);
-	    	this.setNotes(announcementNotes);
-	    	this.setStartdate(announcementStartdate);
-	    	this.setEnddate(announcementEnddate);
-	    	this.setCheckBoxClick(checkboxText);
-	    	this.saveAnnouncement();
-	    	
-	    	
-	    }
+	    	    
 		
-	    
+	   
 }

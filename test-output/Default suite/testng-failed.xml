@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcase.ItemsPageTest">
+      <class name="testcase.TimecardTest">
         <methods>
           <include name="takeScreenshotOnFailure"/>
           <include name="setUpDriverOpenUrl"/>
-          <include name="verifyAddItemsDescription"/>
+          <include name="verifyTimeTeammemberrequired"/>
         </methods>
-      </class> <!-- testcase.ItemsPageTest -->
+      </class> <!-- testcase.TimecardTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

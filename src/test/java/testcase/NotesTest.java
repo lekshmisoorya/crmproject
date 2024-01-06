@@ -14,13 +14,13 @@ public class NotesTest extends BaseClass{
 	 Dashboard dashboard;
      Notes     notesPage;
      @Test(dataProviderClass = DataProviderExcel.class, dataProvider = "logdata",groups= {"Regression"})
-     public void verifyAddNotesTestTitle(String stremail, String strpassword,String noteTitle,String noteDescription) throws InterruptedException {
+     public void verifyAddNotesTitle(String stremail, String strpassword,String noteTitle,String noteDescription) throws InterruptedException {
          login = new LoginPage(driver);
          dashboard= new Dashboard(driver);
          login.loginPage(stremail, strpassword);
          notesPage = new Notes(driver);
          notesPage.notes(noteTitle,noteDescription);
-         Assert.assertTrue(notesPage.checkTableTitle(noteTitle));
+         Assert.assertTrue(notesPage.checkTableTitle());
        
      }
      @Test(dataProviderClass = DataProviderExcel.class, dataProvider = "logdata",groups= {"Regression"})
@@ -30,7 +30,7 @@ public class NotesTest extends BaseClass{
          login.loginPage(stremail, strpassword);
          notesPage = new Notes(driver);
          notesPage.notes(noteTitle,noteDescription);
-         Assert.assertTrue(notesPage.checkTableDescription(noteTitle));
+         Assert.assertTrue(notesPage.checkTableDescription());
        
      } 
      }

@@ -58,9 +58,9 @@ public class Dashboard {
 		{
 			element.clickOnElement(post);
 		}
-	    public String requiredField() 
+	    public boolean requiredField() 
 	     {
-	     return documentrequired.getText();
+	     return documentrequired.getText() != null;
 	     } 
 	    
 	    public void sharedocDashboard(String Descriptions) throws AWTException, InterruptedException

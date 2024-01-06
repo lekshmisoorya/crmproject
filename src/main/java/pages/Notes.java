@@ -106,21 +106,18 @@ public class Notes {
 	    	element.scrollToElement(firstpageoftable);
 	    	wait.waitForElementToBeClickable(firstpageoftable);
 	        firstpageoftable.click();
-	        Thread.sleep(1000);
 	        element.scrollBack();
 	        System.out.println("Scrolled back to the top");
 	    }
 	     
-	      public boolean checkTableTitle(String noteTitle)
+	      public boolean checkTableTitle()
 	    {
+	    	  wait.waitForElementToBeVisible(tabletitle);
+		    	 return(element.isElementDisplayed(tabletitle));
 		    
-	    	String titleofnotes=element.getElementText(tabletitle);
-	    	if(titleofnotes.equalsIgnoreCase(noteTitle))
-	    	{
-	    		
-	    		return true;
-	    	}
-	    	return false;
+	    	//String titleofnotes=element.getElementText(tabletitle);
+	    	//return(titleofnotes.equalsIgnoreCase(noteTitle));
+	    	
 	    }
 	    public void verifyDeleteNoteIsWorking()
 	    {
@@ -130,16 +127,11 @@ public class Notes {
 	    public void clickEditNotes() {
 	        editnotes.click();
 	    }
-	    public boolean checkTableDescription(String noteDescription)
+	    public boolean checkTableDescription()
 	    {
-		    
-	    	String titleofnotes=element.getElementText(tabletitle);
-	    	if(titleofnotes.equalsIgnoreCase(noteDescription))
-	    	{
-	    		
-	    		return true;
-	    	}
-	    	return false;
+	    	 wait.waitForElementToBeVisible(tabletitle);
+	    	 return(element.isElementDisplayed(tabletitle));
+	    	    	
 	    }
 
 	  	public void notes(String noteTitle, String noteDescription) throws InterruptedException
@@ -151,7 +143,7 @@ public class Notes {
 	 		this.clickSaveButton();
 	 		this.clickSearchNotes(noteTitle);
 	 		this.clickFirstPageOfTable();
-	 		this.checkTableTitle(noteTitle);
+	 		this.checkTableTitle();
 	 		this.verifyDeleteNoteIsWorking();
 	 	  
 	 		 

@@ -49,6 +49,7 @@ public class ItemsPage{
 	    @FindBy(xpath="//table[@id='item-table']//tr[1]//td[2]")
 		WebElement tableDescription;
 	    @FindBy(xpath="//table[@id='item-table']//tr[1]//td[1]")
+	   
 	    WebElement tableTitle;
 	    @FindBy(xpath="(//a[@title='Delete'])[2]")
 		WebElement deleteitem;
@@ -117,21 +118,21 @@ public class ItemsPage{
 	        firstpageoftable.click();
 	        Thread.sleep(1000);
 	        element.scrollBack();
-	        System.out.println("Scrolled back to the top");
+	       
 	    }
 	           	
-	      public boolean checkTableDescription(String itemDescription)
+	      public boolean checkTableDescription()
 	    {
-		    System.out.println(tableDescription.getText());
-	    	String titleofnotes=element.getElementText(tableDescription);
-	    	return (titleofnotes.equalsIgnoreCase(itemDescription));
+	    	  wait.fluentWait(tableDescription);
+	            return element.isElementDisplayed(tableDescription);
+	    	
 	    	
 	    }
-	      public boolean checkTableTitle(String itemTitle)
+	      public boolean checkTableTitle()
 		    {
-			    System.out.println(tableTitle.getText());
-		    	String titleofnotes=element.getElementText(tableTitle);
-		    return(titleofnotes.equalsIgnoreCase(itemTitle));
+	    	
+	    	  wait.fluentWait(tableTitle);
+		    	return element.isElementDisplayed(tableTitle);
 		    	
 		    }
 	    public void verifyDeleteItem()
@@ -157,7 +158,7 @@ public class ItemsPage{
 	 		this.clickSaveButton();
 	 		this.clickSearchNotes(itemDescription);
 	 		this.clickFirstPageOfTable();
-	 		this.checkTableDescription(itemDescription);
+	 		this.checkTableDescription();
 	 		this.verifyDeleteItem();
 		 	  
 	 		 

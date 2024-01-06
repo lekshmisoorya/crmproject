@@ -15,17 +15,13 @@ import utilities.ExcelUtilities;
 import utilities.FakerUtility;
 
 public class ProfilePageTest extends BaseClass {
-	 LoginPage login;
-	 Dashboard dashboard;
+	 
 	 ProfilePage profilepage;
    @Test(groups= {"Regression"})
    public void verifyvalidationFirstname() throws InterruptedException, IOException {
-  	   login = new LoginPage(driver);
-       dashboard= new Dashboard(driver);
+  	   
   	   ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Profiletest");
-       login.setEmail(excel.getCellData(1, 0));
-	   login.setPassword(excel.getCellData(1, 1));
-	   login.signin();
+  	 Login(excel.getCellData(1,0),excel.getCellData(1,1));
        profilepage = new ProfilePage(driver);
        profilepage.clickProfile();
        profilepage.clickMyProfile();
@@ -39,18 +35,14 @@ public class ProfilePageTest extends BaseClass {
        profilepage.setGender(excel.getCellData(1, 9));
        profilepage.saveProfile();
 
-        //Assert.assertTrue(profilepage.checkAddress(excel.getCellData(1, 4)));
         Assert.assertTrue(profilepage.validateFirstname());
    }
   @Test(groups= {"Regression"})
    public void verifyRequiredFirstName() throws InterruptedException, IOException 
   {
-	   login = new LoginPage(driver);
-       dashboard= new Dashboard(driver);
+	  
  	   ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Profiletest");
-       login.setEmail(excel.getCellData(1, 0));
-	   login.setPassword(excel.getCellData(1, 1));
-	   login.signin();
+ 	  Login(excel.getCellData(1,0),excel.getCellData(1,1));
        profilepage = new ProfilePage(driver);
        profilepage.clickProfile();
        profilepage.clickMyProfile();
@@ -63,6 +55,6 @@ public class ProfilePageTest extends BaseClass {
        profilepage.setSSN(excel.getCellData(1, 16));
        profilepage.setGender(excel.getCellData(1, 17));
        profilepage.saveProfile();
-        Assert.assertTrue(profilepage.nameRequiredField());
+       Assert.assertTrue(profilepage.nameRequiredField());
   }}
 

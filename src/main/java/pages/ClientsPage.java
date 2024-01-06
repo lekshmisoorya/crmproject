@@ -60,6 +60,8 @@ public class ClientsPage {
 	   WebElement printID;
 	   @FindBy(xpath="//span[@id='company_name-error']")
 	   WebElement companynameRequired;
+	   @FindBy(xpath="//table[@class='display dataTable no-footer']//tr[1]//td[2]")
+	   WebElement companyNameTable;
 	
 	    public void clickclients() {
 		 wait.waitForElementToBeClickable(clients);
@@ -155,6 +157,13 @@ public class ClientsPage {
 	    	printID.click();
 			return true;
 	   }
+	   public boolean checkCompanyName()
+	   {
+		   wait.waitForElementToBeVisible(companyNameTable);
+  			
+  			return(element.isElementDisplayed(companyNameTable));
+	   }
+	   
 	   public String requiredField() 
 	     {
 	     return companynameRequired.getText();

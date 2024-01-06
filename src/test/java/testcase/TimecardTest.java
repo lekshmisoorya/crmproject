@@ -1,29 +1,53 @@
 package testcase;
 
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pages.Dashboard;
-import pages.LoginPage;
+import constant.Constant;
+
 import pages.Timecards;
 import utilities.DataProviderExcel;
+import utilities.ExcelUtilities;
 
 
 public class TimecardTest extends BaseClass{
-	 LoginPage login;
-	 Dashboard dashboard;
+	
 	 Timecards timecards;
-   @Test(dataProviderClass = DataProviderExcel.class, dataProvider = "logdata")
-   public void verifyTimeTeammemberrequired(String stremail,String strpassword,String timeTeammembers,String timeIndates,String timeIntimes,String timeOutdates,String timeOuttimes,String timeNotes) throws InterruptedException {
-  	   login = new LoginPage(driver);
-       dashboard= new Dashboard(driver);
-       login.loginPage(stremail, strpassword);
-       timecards = new Timecards(driver);
-       timecards.addTimeCards(timeTeammembers,timeIndates,timeIntimes,timeOutdates,timeOuttimes,timeNotes); 
-       if (timeTeammembers.isEmpty()) {
-	         System.out.println("Is description field required? " + timecards.checkRequiredteammember());
-	         Assert.assertTrue(timecards.checkRequiredteammember());
-       }  }
+	  @Test
+  public void verifyInTimerequired() throws InterruptedException, IOException {
+	   ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Timecardtest");
+		 Login(excel.getCellData(1,0),excel.getCellData(1,1));
+		 timecards = new Timecards(driver);
+		 timecards.clickTimeCards();
+		 timecards.clickAddtime();
+		 timecards.setTeamMemberName(excel.getCellData(2, 2));
+		 timecards.setIndate(excel.getCellData(2, 3));
+		 timecards.setOutdate(excel.getCellData(2, 5));
+		 timecards.setOutTime(excel.getCellData(2, 6));
+		 timecards.setNotes(excel.getCellData(2, 7));
+		 timecards.saveTime();
+ 	    Assert.assertTrue(timecards.checkRequiredinTime());
+         }
+  
+   @Test
+public void verifyTimeTeammember() throws InterruptedException, IOException
+{
+	 ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Timecardtest");
+	 Login(excel.getCellData(1,0),excel.getCellData(1,1));
+	 timecards = new Timecards(driver);
+	 timecards.clickTimeCards();
+	 timecards.clickAddtime();
+	 timecards.setTeamMemberName(excel.getCellData(1, 2));
+	 timecards.setIndate(excel.getCellData(1, 3));
+	 timecards.setInTime(excel.getCellData(1, 4));
+	 timecards.setOutdate(excel.getCellData(1, 5));
+	 timecards.setOutTime(excel.getCellData(1, 6));
+	 timecards.setNotes(excel.getCellData(1, 7));
+	 timecards.saveTime();
+     Assert.assertTrue(timecards.checkTableTeamMember());
 }
+    }  
 

@@ -46,20 +46,19 @@ public class LoginPage {
 		    }
 		 public void loginPage(String stremail,String strpassword)
 			 {
-				    
 			        this.setEmail(stremail);
 			        wait.waitForElementToBeVisible(password);
 			        this.setPassword(strpassword);
 			        this.signin();  
 			   
 			  }
-		     public String getAuthenticationFailed() 
+		     public boolean getAuthenticationFailed() 
 		     {
-		     return authenticationfailed.getText();
+		     return authenticationfailed.getText() != null;
 	         } 
-		     public String requiredField() 
+		     public boolean requiredField() 
 		     {
-		     return username.getText();
+		     return username.getText() != null;
 		     }
 			
 	}

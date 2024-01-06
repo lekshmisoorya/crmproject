@@ -94,8 +94,15 @@ public class BaseClass {
     	   FileUtils.copyFile(source, finalDestination);
 		    return destination;
     	      	}
+    public void Login(String email, String password) throws InterruptedException {
+        login = new LoginPage(driver);
+        dashboard= new Dashboard(driver);
+        login.setEmail(email);
+        login.setPassword(password);
+        login.signin();
+
     }
- 
+}
 
 
 

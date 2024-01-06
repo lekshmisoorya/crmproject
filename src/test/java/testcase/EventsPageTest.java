@@ -17,19 +17,15 @@ import pages.LoginPage;
 import utilities.ExcelUtilities;
 
 public class EventsPageTest extends BaseClass{
-	LoginPage login;
-	 Dashboard dashboard;
+	
 	 EventsPage eventspage;
    @Test
-   public void verifyUseraddeventDescription() throws InterruptedException, IOException {
-	   login = new LoginPage(driver);
-       dashboard= new Dashboard(driver);
+   public void verifyeventDescriptionRequired() throws InterruptedException, IOException {
+	  
      	 ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Eventstest");
-       login.setEmail(excel.getCellData(1, 0));
-		 login.setPassword(excel.getCellData(1, 1));
-		 login.signin();
-       eventspage = new EventsPage(driver);
-       eventspage.events();
+     	 Login(excel.getCellData(1,0),excel.getCellData(1,1));
+           eventspage = new EventsPage(driver);
+          eventspage.events();
 		 eventspage.addevent();
 		 eventspage.setTitle(excel.getCellData(1, 2));
 		 eventspage.setDescription(excel.getCellData(1, 3));
@@ -42,13 +38,10 @@ public class EventsPageTest extends BaseClass{
 	     }
    
       @Test
-      public void verifyUseraddeventTitle() throws InterruptedException, IOException {
-   	   login = new LoginPage(driver);
-          dashboard= new Dashboard(driver);
+      public void verifyeventTitleRequired() throws InterruptedException, IOException {
+   	   
         	 ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Eventstest");
-          login.setEmail(excel.getCellData(2, 0));
-   		 login.setPassword(excel.getCellData(2, 1));
-   		 login.signin();
+        	 Login(excel.getCellData(1,0),excel.getCellData(1,1));
           eventspage = new EventsPage(driver);
           eventspage.events();
    		 eventspage.addevent();

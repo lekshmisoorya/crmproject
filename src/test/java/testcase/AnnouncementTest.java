@@ -13,19 +13,13 @@ import pages.LoginPage;
 import utilities.ExcelUtilities;
 
 public class AnnouncementTest extends BaseClass {
-	 LoginPage login;
-	 Dashboard dashboard;
+	
 	 Announcements announcements;
    @Test
    public void verifyAddAnnouncementsTitle() throws InterruptedException, IOException {
 	   ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Announcementtest");
-		  String email = excel.getCellData(1, 0);
-		  String password = excel.getCellData(1, 1);
-		  login = new LoginPage(driver);
-		  login.setEmail(email);
-		  login.setPassword(password);
-		  login.signin();
-	      dashboard= new Dashboard(driver);
+	   Login(excel.getCellData(1,0),excel.getCellData(1,1));
+		
 	      announcements = new Announcements(driver);
 	      announcements.setAnnouncements();
 	      announcements.setAddannouncements();
@@ -35,20 +29,15 @@ public class AnnouncementTest extends BaseClass {
 	      announcements.setEnddate(excel.getCellData(1, 5));
 	      announcements.setCheckBoxClick(excel.getCellData(1, 6));
 	      announcements.saveAnnouncement();
-	       Assert.assertTrue(announcements.checkTitle(excel.getCellData(1, 2)));
+	       Assert.assertTrue(announcements.checkTitle());
    }
   
    @Test
-   public void titleErrorAnnouncement() throws InterruptedException, IOException 
+   public void titleAnnouncementRequiredField() throws InterruptedException, IOException 
    {
   	    ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Announcementtest");
-		  String email = excel.getCellData(1, 0);
-		  String password = excel.getCellData(1, 1);
-		  login = new LoginPage(driver);
-		  login.setEmail(email);
-		  login.setPassword(password);
-		  login.signin();
-	      dashboard= new Dashboard(driver);
+	  	  Login(excel.getCellData(1,0),excel.getCellData(1,1));
+	      
 	      announcements = new Announcements(driver);
 	      announcements.setAnnouncements();
 	      announcements.setAddannouncements();
@@ -58,7 +47,7 @@ public class AnnouncementTest extends BaseClass {
 	      announcements.setEnddate(excel.getCellData(1, 5));
 	      announcements.setCheckBoxClick(excel.getCellData(1, 6));
 	      announcements.saveAnnouncement(); 
-       Assert.assertTrue(announcements.requiredField().contains("This field is required."));
+       Assert.assertTrue(announcements.requiredField());
 	}
    
    

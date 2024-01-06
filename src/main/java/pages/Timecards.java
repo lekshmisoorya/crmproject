@@ -48,6 +48,12 @@ public class Timecards {
 	  WebElement search;
 	 @FindBy(xpath="//span[@id='attendance_user_id-error']")
 	 WebElement teammemberrequired;
+	 @FindBy(xpath="(//table[@id='attendance-table']//tr//td)[1]")
+	 WebElement tableteammember;
+	 @FindBy(xpath="//a[@class='paginate_button current']")
+	 WebElement firstpageoftable;
+	 @FindBy(xpath="//span[@id='in_time-error']")
+	 WebElement intimeRequired;
 	 public void clickTimeCards()
 		{
 		 wait.waitForElementToBeClickable(attendance);
@@ -60,8 +66,18 @@ public class Timecards {
 			wait.waitForElementToBeClickable(addtime);
 			addtime.click();	
 		}	
+		   public void setTeamMemberName(String teamMemberName) {
+		    	
 
-		public void setTeammember(String timeTeammembers)
+				  wait.waitForElementToBeVisible(teammember);
+			      wait.waitForElementToBeClickable(teammember);
+			  	  element.mouseHoverAndClickonElement(teammember);
+			  	  element.sendKeysUsingJavaScript(teammemberslist,teamMemberName);
+				  element.pressDownArrow(teammemberslist);
+			  	  element.pressEnter(teammemberslist);
+		    }
+
+	/*public void setTeammember(String timeTeammembers)
 		{
 			
 			  wait.waitForElementToBeVisible(teammember);
@@ -70,7 +86,7 @@ public class Timecards {
 		  	  element.sendKeysUsingJavaScript(teammemberslist,timeTeammembers);
 			  element.pressDownArrow(teammemberslist);
 		  	  element.pressEnter(teammemberslist);
-		}	
+		}*/	
 		 public void setIndate(String timeIndates)
 		    {
 		    	wait.waitForElementToBeVisible(indate);
@@ -99,23 +115,59 @@ public class Timecards {
 		    	wait.waitForElementToBeVisible(note);
 		    	note.sendKeys(timeNotes);
 		    }	
-		
-				 public boolean checkRequiredteammember() {
-						wait.waitForElementToBeVisible(teammemberrequired);
-			            return element.isElementDisplayed(teammemberrequired);
-					}
-			
-				public void saveTime()
+				 public void saveTime()
 				    {
 				    	 	    	       
 				   element.mouseHoverAndClickonElement(saveButton);
 				    	     
-				  		}
-		 public void addTimeCards(String timeTeammembers,String timeIndates,String timeIntimes,String timeOutdates,String timeOuttimes,String timeNotes)
+				  		} 
+				 public void clickSearchNotes(String teamMemberName)
+				    {
+				    try {
+						wait.waitForElementToBeClickable(search);
+						search.click();
+					} catch (Exception e) {
+					    e.printStackTrace();
+					}
+				    
+				  	   try {
+				    	wait.waitForElementToBeVisible(search);
+				    	search.sendKeys(teamMemberName);
+				    
+
+				    	
+				    }  catch (Exception e) {
+					    e.printStackTrace();
+					}
+				    }
+				  public void clickFirstPageOfTable() throws InterruptedException
+				    {   
+				       
+				    	element.scrollToElement(firstpageoftable);
+				    	wait.waitForElementToBeClickable(firstpageoftable);
+				        firstpageoftable.click();
+				        element.scrollBack();
+				        System.out.println("Scrolled back to the top");
+				    }
+				 public boolean checkTableTeamMember()
+				 {
+					 wait.waitForElementToBeVisible(tableteammember);
+			  			
+			  			return(element.isElementDisplayed(tableteammember));
+						
+				 }
+				
+				 
+				 public boolean checkRequiredinTime() {
+					 wait.waitForElementToBeVisible(intimeRequired);
+			            return element.isElementDisplayed(intimeRequired);
+				 }
+				
+		 public void addTimeCards(String teamMemberName,String timeIndates,String timeIntimes,String timeOutdates,String timeOuttimes,String timeNotes)
 		    {
 			    this.clickTimeCards();
 			    this.clickAddtime();
-		    	this.setTeammember(timeTeammembers);
+		    	this.setTeamMemberName(teamMemberName);
 		    	this.setIndate(timeIndates);
 		    	this.setInTime(timeIntimes);
 		    	this.setOutdate(timeOutdates);
