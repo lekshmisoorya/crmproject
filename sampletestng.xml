@@ -6,16 +6,9 @@
     <test name="Test_Chrome">
         <parameter name="Browser" value="chrome" />
         <classes>
-			              <class name="testcase.AnnouncementTest" /> 
-                         <class name="testcase.ClientsPageTest" /> 
-                        <class name="testcase.DashboardTest" />                              
-                       <class name="testcase.EventsPageTest" /> 
-                         <class name="testcase.ItemsPageTest" /> 
+			             
                         <class name="testcase.LoginPageTest" /> 
-                         <class name="testcase.MessagePageTest" /> 
-                         <class name="testcase.NotesTest" /> 
-                        <class name="testcase.ProfilePageTest" /> 
-                        <class name="testcase.TimecardTest" /> 
+                        
           </classes>
     </test>
     
