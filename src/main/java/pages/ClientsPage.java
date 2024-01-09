@@ -46,7 +46,7 @@ public class ClientsPage {
 	 //WebElement vat_number;
      @FindBy(xpath ="//button[@type='submit']")
 	 WebElement savebutton;
-	 @FindBy(xpath ="//input[@aria-controls='client-table']")
+	 @FindBy(xpath ="//input[@type='search']")
 		WebElement searchclients;
 		@FindBy(xpath="//a[@class='paginate_button current']")
 		WebElement firstpageoftable;
