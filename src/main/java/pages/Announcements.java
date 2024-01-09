@@ -46,7 +46,7 @@ public class Announcements {
 	    WebElement saveButton;
 	    @FindBy(xpath="//input[@type='checkbox']")
 		List<WebElement> checkboxes;
-	    @FindBy(xpath="//span[@id='title-error']")
+	    @FindBy(xpath="(//span[@class='help-block'])[1]")
 	    WebElement titleRequired;
 	    @FindBy(xpath ="//a[contains(@href,'announcements')]")
 	    WebElement announcements1;
@@ -108,13 +108,10 @@ public class Announcements {
 	    		viewbutton.click();
 	    	}
 	    	
-	    	  
-	    	     	   
-	    	  
-	    	   public boolean checkTitle() {
+	    	   	      
+	  	    	   public boolean checkTitle() {
 	    		   wait.waitForElementToBeVisible(title);
-	   			
-	   			return(element.isElementDisplayed(title));
+	   	   			return(element.isElementDisplayed(title));
 		}
 	    	  
 	    	           	
