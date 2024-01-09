@@ -114,11 +114,7 @@ public class ClientsPage {
 	    	website.sendKeys(clientWebsite); 
          }
 	    
-	  /*  public void setVatNumber(String clientVatNumber) 
-	    {
-	    	wait.waitForElementToBeVisible(vat_number);
-	    	vat_number.sendKeys(clientVatNumber); 
-         }*/
+	 
 	   
 	    public void clickSaveButton() {
 	    	wait.waitForElementToBeClickable(savebutton);
@@ -160,9 +156,6 @@ public class ClientsPage {
 	   public boolean checkCompanyName()
 	   {
 		   return companyNameTable.getText() != null;
-		  // wait.waitForElementToBeVisible(companyNameTable);
-  			
-  			//return(element.isElementDisplayed(companyNameTable));
 	   }
 	  
 	   public boolean requiredField() 
@@ -187,8 +180,7 @@ public class ClientsPage {
 	    	this.setCountry(clientCountry);
 	    	this.setPhone(FakerUtility.phoneNumber());
 	    	this.setWebsite(clientWebsite);
-	    	//this.setVatNumber(clientVatNumber);
-	    	
+	        	
 	    	this.clickSaveButton();
 	    	this.clickSearchItems(clientCompanyName);
 	    	this.setPrintClients();

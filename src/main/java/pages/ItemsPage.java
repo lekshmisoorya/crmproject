@@ -57,7 +57,7 @@ public class ItemsPage{
 	    WebElement rateRequired;
 	    public void clickItems()
 	    {
-	    	System.out.println("Before");
+	    	
 	    	wait.waitForElementToBeClickable(items);
 	    		    	items.click();
 	   
@@ -116,7 +116,7 @@ public class ItemsPage{
 	    	element.scrollToElement(firstpageoftable);
 	    	wait.waitForElementToBeClickable(firstpageoftable);
 	        firstpageoftable.click();
-	        Thread.sleep(1000);
+	      
 	        element.scrollBack();
 	       
 	    }
@@ -146,23 +146,6 @@ public class ItemsPage{
             return element.isElementDisplayed(rateRequired);
 	     } 
 
-	    public void addNewItem(String itemTitle, String itemDescription,String itemunittype,String itemRate) throws InterruptedException
-	 	 {
-	 		 this.clickItems();
-	 		 this.additems();
-	 		 this.setTitle(itemTitle);
-	 		 this.setDescription(itemDescription);
-	 		 this.setUnitType(itemunittype);
-	 		 this.setItemrate(itemRate);
-	 		
-	 		this.clickSaveButton();
-	 		this.clickSearchNotes(itemDescription);
-	 		this.clickFirstPageOfTable();
-	 		this.checkTableDescription();
-	 		this.verifyDeleteItem();
-		 	  
-	 		 
-	 	 }
-		
+	   
 	    
 }

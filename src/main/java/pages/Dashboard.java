@@ -63,14 +63,6 @@ public class Dashboard {
 	     return documentrequired.getText() != null;
 	     } 
 	    
-	    public void sharedocDashboard(String Descriptions) throws AWTException, InterruptedException
-	    {
-	    	this.clickNotes();
-	    	this.setDescription(Descriptions);
-	    	this.uploadFile();
-	    	this.clickpost();
-	    	
-	    	
-	    }
+	   
 	
 }

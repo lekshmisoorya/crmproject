@@ -161,20 +161,6 @@ public class ProfilePage {
 	        return firstName.getText() != null;
 	    }
 		
-		public void addProfile(String profilefirstname,String profilelastname,String email,String Address,String phoneNumber,String skypeData,String ssnNum,String gender) 
-		{
-			this.clickProfile();
-			this.clickMyProfile();
-			this.setFirstName(profilefirstname);
-			this.setLastName(profilelastname);
-			this.setEmail(FakerUtility.emailID());
-			this.setAlternativeAddress(Address);
-			this.setPhone(phoneNumber);
-			this.setSkype(skypeData);
-			this.setSSN(ssnNum);
-			this.setGender(gender);
-			this.saveProfile();
-			
-}}
+}
 		
 		

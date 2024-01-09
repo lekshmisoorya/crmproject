@@ -103,7 +103,7 @@ public class EventsPage {
 	    public void clickSaveButton() {
 	    	wait.waitForElementToBeClickable(savebutton);
 	    	savebutton.click();
-	    	System.out.println("save");
+	    	
 	    }
 	    
 	    public void strdate(String day, String month, String year) {
@@ -111,19 +111,7 @@ public class EventsPage {
         	element.enterDate(startdate, day, month, year);
         }
 	   
-	    public void addingEvents(String eventsTitle,String eventsDescription,String eventsStartdate,String eventsEnddate,String eventsLocation,String radiobuttontext)
-	    		{
-	    	this.events();
-	    	this.addevent();
-	    	this.setTitle(eventsTitle);
-	    	this.setDescription(eventsDescription);
-	    	this.setStartdate(eventsStartdate);
-	    	this.setEnddate(eventsEnddate);
-	    	this.setLocation(eventsLocation);
-	    	this.setRadioButton(radiobuttontext);
-	    	this.clickSaveButton();
-	    	
-	    }
+	   
 		public boolean checkRequiredDescription() {
 			
 			wait.fluentWait(descriptionRequired);
@@ -132,8 +120,7 @@ public class EventsPage {
 			
 		}
 		public boolean checkRequiredTitle() {
-			//wait.waitForElementToBeVisible(titleRequired);
-           // return element.isElementDisplayed(titleRequired);
+			
             return titleRequired.getText() != null;
 		}   
 }

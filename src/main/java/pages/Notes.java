@@ -107,7 +107,7 @@ public class Notes {
 	    	wait.waitForElementToBeClickable(firstpageoftable);
 	        firstpageoftable.click();
 	        element.scrollBack();
-	        System.out.println("Scrolled back to the top");
+	       
 	    }
 	     
 	      public boolean checkTableTitle()
@@ -115,8 +115,7 @@ public class Notes {
 	    	  wait.waitForElementToBeVisible(tabletitle);
 		    	 return(element.isElementDisplayed(tabletitle));
 		    
-	    	//String titleofnotes=element.getElementText(tabletitle);
-	    	//return(titleofnotes.equalsIgnoreCase(noteTitle));
+	    	
 	    	
 	    }
 	    public void verifyDeleteNoteIsWorking()
