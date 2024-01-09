@@ -11,7 +11,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.testng.annotations.*;
+import org.testng.annotations.DataProvider;
 import constant.Constant;
 public class DataProviderExcel {
 	 @DataProvider(name = "logdata")
