@@ -11,11 +11,11 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.testng.annotations.DataProvider;
+import org.testng.annotations.*;
 import constant.Constant;
 public class DataProviderExcel {
 	 @DataProvider(name = "logdata")
-	    public String[][] getData(Method m) {
+	    public String[][] getData(Method m)throws EncryptedDocumentException, IOException {
 	        String[][] testData = null;
 
 	        try {
