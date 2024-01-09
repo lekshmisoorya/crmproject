@@ -42,8 +42,8 @@ public class ClientsPage {
 	 WebElement  phone;
 	 @FindBy(name="website")
 	 WebElement  website;
-	 @FindBy(name="vat_number")
-	 WebElement vat_number;
+	// @FindBy(name="vat_number")
+	 //WebElement vat_number;
      @FindBy(xpath ="//button[@type='submit']")
 	 WebElement savebutton;
 	 @FindBy(xpath ="//input[@aria-controls='client-table']")
@@ -114,11 +114,11 @@ public class ClientsPage {
 	    	website.sendKeys(clientWebsite); 
          }
 	    
-	    public void setVatNumber(String clientVatNumber) 
+	  /*  public void setVatNumber(String clientVatNumber) 
 	    {
 	    	wait.waitForElementToBeVisible(vat_number);
 	    	vat_number.sendKeys(clientVatNumber); 
-         }
+         }*/
 	   
 	    public void clickSaveButton() {
 	    	wait.waitForElementToBeClickable(savebutton);
@@ -175,7 +175,7 @@ public class ClientsPage {
 		    String expectedText = clientAddress.trim();
    		return actualText.equalsIgnoreCase(expectedText);
 		}
-	    public void addClient(String clientCompanyName,String clientAddress,String clientCity,String clientState,String clientZip,String clientCountry,String clientPhone,String clientWebsite,String clientVatNumber) throws InterruptedException
+	    public void addClient(String clientCompanyName,String clientAddress,String clientCity,String clientState,String clientZip,String clientCountry,String clientPhone,String clientWebsite) throws InterruptedException
 	    {
 	    	this.clickclients();
 	    	this.clickAddclientButton();
@@ -187,7 +187,7 @@ public class ClientsPage {
 	    	this.setCountry(clientCountry);
 	    	this.setPhone(FakerUtility.phoneNumber());
 	    	this.setWebsite(clientWebsite);
-	    	this.setVatNumber(clientVatNumber);
+	    	//this.setVatNumber(clientVatNumber);
 	    	
 	    	this.clickSaveButton();
 	    	this.clickSearchItems(clientCompanyName);
