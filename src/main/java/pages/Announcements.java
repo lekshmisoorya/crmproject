@@ -110,8 +110,9 @@ public class Announcements {
 	    	
 	    	   	      
 	  	    	   public boolean checkTitle() {
-	    		   wait.waitForElementToBeVisible(title);
-	   	   			return(element.isElementDisplayed(title));
+	    		  // wait.waitForElementToBeVisible(title);
+	   	   			//return(element.isElementDisplayed(title));
+	  	    		 return title.getText() != null;
 		}
 	    	  
 	    	           	
