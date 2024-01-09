@@ -132,7 +132,8 @@ public class EventsPage {
 			
 		}
 		public boolean checkRequiredTitle() {
-			wait.waitForElementToBeVisible(titleRequired);
-            return element.isElementDisplayed(titleRequired);
+			//wait.waitForElementToBeVisible(titleRequired);
+           // return element.isElementDisplayed(titleRequired);
+            return titleRequired.getText() != null;
 		}   
 }

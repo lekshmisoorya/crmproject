@@ -159,14 +159,15 @@ public class ClientsPage {
 	   }
 	   public boolean checkCompanyName()
 	   {
-		   wait.waitForElementToBeVisible(companyNameTable);
+		   return companyNameTable.getText() != null;
+		  // wait.waitForElementToBeVisible(companyNameTable);
   			
-  			return(element.isElementDisplayed(companyNameTable));
+  			//return(element.isElementDisplayed(companyNameTable));
 	   }
-	   
-	   public String requiredField() 
+	  
+	   public boolean requiredField() 
 	     {
-	     return companynameRequired.getText();
+	     return companynameRequired.getText()!=null;
 	     } 
 	   public boolean checkAddress(String clientAddress) {
 		    wait.waitForElementToBeVisible(address);

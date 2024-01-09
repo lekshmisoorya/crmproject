@@ -8,7 +8,8 @@
         <classes>
 			             
                     
-                        <class name="testcase.AnnouncementTest" /> 
+                        <class name="testcase.ClientsPageTest" /> 
+                        <class name="testcase.EventsPageTest" /> 
                       
                        
                         
