@@ -23,7 +23,7 @@ public class NotesTest extends BaseClass{
          Assert.assertTrue(notesPage.checkTableTitle());
        
      }
-     @Test(dataProviderClass = DataProviderExcel.class, dataProvider = "logdata",groups= {"Regression"})
+     @Test(dataProviderClass = DataProviderExcel.class, dataProvider = "logdata",groups= {"Regression","Sanity"})
      public void verifyAddNotesDescription(String stremail, String strpassword,String noteTitle,String noteDescription) throws InterruptedException {
          login = new LoginPage(driver);
          dashboard= new Dashboard(driver);

@@ -114,9 +114,8 @@ public class Announcements {
 	  	    		 return title.getText() != null;
 		}
 	    	  
-	    	           	
-	    	 
-	    	    
+        	
+	    	     	    
 	    	   public boolean requiredField() 
 			     {
 			     return titleRequired.getText() != null;

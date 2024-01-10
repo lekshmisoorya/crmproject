@@ -37,7 +37,7 @@ public class ProfilePageTest extends BaseClass {
 
         Assert.assertTrue(profilepage.validateFirstname());
    }
-  @Test(groups= {"Regression"})
+  @Test(groups= {"Sanity"})
    public void verifyRequiredFirstName() throws InterruptedException, IOException 
   {
 	  

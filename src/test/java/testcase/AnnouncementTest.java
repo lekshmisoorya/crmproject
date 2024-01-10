@@ -19,7 +19,6 @@ public class AnnouncementTest extends BaseClass {
    public void verifyAddAnnouncementsTitle() throws InterruptedException, IOException {
 	   ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Announcementtest");
 	   Login(excel.getCellData(1,0),excel.getCellData(1,1));
-		
 	      announcements = new Announcements(driver);
 	      announcements.setAnnouncements();
 	      announcements.setAddannouncements();
@@ -37,7 +36,6 @@ public class AnnouncementTest extends BaseClass {
    {
   	    ExcelUtilities excel= new ExcelUtilities(Constant.EXCEL_FILE_PATH, "Announcementtest");
 	  	  Login(excel.getCellData(1,0),excel.getCellData(1,1));
-	      
 	      announcements = new Announcements(driver);
 	      announcements.setAnnouncements();
 	      announcements.setAddannouncements();
